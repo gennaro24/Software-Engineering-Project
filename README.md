@@ -16,7 +16,7 @@ L'applicativo deve essere sviluppato in linguaggio **Java** e dotato di interfac
 
 ## Struttura Repository 
 
-- `/docs`               # Documentazione del progetto (Requirements , Design)
+- `/docs`               # Documentazione del progetto (Planning ,Requirements , Design)
 - `/docs/Requirements`  # Requisiti di progetto
 - `/docs/Design`        # Progettazione e diagrammi di progetto
 - `/resources`          # Eventuali file di immagini o dati 
