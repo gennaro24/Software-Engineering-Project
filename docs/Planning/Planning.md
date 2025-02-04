@@ -1,10 +1,7 @@
 # 📅 Project Plan - Rubrica Contatti
 #N.B : Il planning verrà dettagliato in corso d'opera con task più specifiche ove necessario.
 
-## 🔹 Obiettivo
-Sviluppare un'applicazione che gestisce una rubrica di contatti telefonici ed email, con funzionalità di creazione, modifica, cancellazione, ricerca e salvataggio su file.
-
-## 🏗️ Struttura del Progetto
+## 🏗️ Struttura del Planning
 Il progetto è suddiviso nelle seguenti fasi:
 
 1. **Setup del repository GitHub** *(Entro il 06/02/2025)* Completato✅
