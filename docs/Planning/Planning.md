@@ -19,13 +19,17 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Caricare tutto su GitHub.
 
 3. **Progettazione** *(Entro il 21/02/2025)*
+   - Progettazione del sistema (mock-up)
    - Disegnare il **diagramma delle classi** UML.
    - Creare i **diagrammi di sequenza** per le interazioni più importanti.
    - Aggiungere commenti sulle scelte progettuali.
    - Caricare il documento su GitHub.
+   - Eventuale aggiornamento dei requisiti.
+   - Scrivere lo scheletro delle classi
+   - Documentazione delle classi.
 
-4. **Implementazione & Testing** *(Entro il 27/02/2025)*
-   - Scrivere il codice del sistema.
+5. **Implementazione & Testing** *(Entro il 27/02/2025)*
+   - Implementazione delle classi.
    - Implementare i test automatici con **JUnit**.
    - Testare e correggere eventuali bug.
    - Aggiornare costantemente GitHub.
