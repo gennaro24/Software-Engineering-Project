@@ -22,9 +22,9 @@ L'applicativo deve essere sviluppato in linguaggio **Java** e dotato di interfac
 - `/resources`          # Eventuali file di immagini o dati 
 - `/src`                # Codice sorgente
 - `/tests`              # Contiene test per verificare il funzionamento dell'applicativo
-- **2 branch**:
-  --main: contiene il codice sviluppato e approvato
-  --dev: contiene il codice in sviluppo / non approvato
+- `**2 branch**`:
+  1. main: contiene il codice sviluppato e approvato
+  2. dev: contiene il codice in sviluppo / non approvato
 
 
 
