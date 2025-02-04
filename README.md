@@ -11,7 +11,7 @@ Il progetto ha come obiettivo la realizzazione di una rubrica per la gestione di
 - Il **salvataggio** e il **caricamento** della rubrica dovrà essere gestito attraverso **File** .
 - I contatti dovranno essere mostrati in ordine alfabetico e la ricerca potrà avvenire attraverso l'inserimento di una sottostringa del nome o del cognome.
 
-L'applicativo deve essere sviluppato in linguaggio **Java** e dotato di interfaccia grafica realizzata con framework **JavaFX** Utilizzando il pattern MVC.
+L'applicativo deve essere sviluppato in linguaggio **Java** e dotato di interfaccia grafica realizzata con framework **JavaFX** Utilizzando il pattern MVC. Inoltre dovranno essere effettuati dei test per verificarne il corretto funzionamento, fatti attraverso **JUnit**
 
 
 ## Struttura Repository 
@@ -22,6 +22,9 @@ L'applicativo deve essere sviluppato in linguaggio **Java** e dotato di interfac
 - `/resources`          # Eventuali file di immagini o dati 
 - `/src`                # Codice sorgente
 - `/tests`              # Contiene test per verificare il funzionamento dell'applicativo
+- **2 branch**:
+  --main: contiene il codice sviluppato e approvato
+  --dev: contiene il codice in sviluppo / non approvato
 
 
 
