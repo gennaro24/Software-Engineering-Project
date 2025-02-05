@@ -14,7 +14,7 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Scrittura del documento in linguaggio **LaTeX** per i Requirements ✅
    - Scelta di categorizzazione dei requirements in gruppi. ✅
    - Scelta di prioritizzazione dei requisiti. ✅
-   - Definizione preliminare dei requisiti. ⏳
+   - Definizione preliminare dei requisiti. _In corso.._⏳
    - Definire i casi d'uso principali (creazione, modifica, cancellazione, ricerca, salvataggio su file).
    - Creare il diagramma UML dei casi d'uso.
    - Descrivere i casi d'uso 
