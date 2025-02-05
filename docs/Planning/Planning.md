@@ -10,7 +10,7 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Scrivere il README.md con descrizione del progetto. ✅
    - Configurare il file `.gitignore`. ✅
 
-2. **Ingegnerizzazione dei Requisiti** *(Entro il 15/02/2025)*
+2. **Ingegnerizzazione dei Requisiti** *(Entro il 15/02/2025)* _In corso.._ ⏳
    - Definire i casi d'uso principali (creazione, modifica, cancellazione, ricerca, salvataggio su file).
    - Creare il diagramma UML dei casi d'uso.
    - Descrivere i casi d'uso
