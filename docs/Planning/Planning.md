@@ -11,12 +11,16 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Configurare il file `.gitignore`. ✅
 
 2. **Ingegnerizzazione dei Requisiti** *(Entro il 15/02/2025)* _In corso.._ ⏳
+   - Scrittura del documento in linguaggio **LaTeX** per i Requirements ✅
+   - Scelta di categorizzazione dei requirements in gruppi. ✅
+   - Scelta di prioritizzazione dei requisiti. ✅
+   - Definizione preliminare dei requisiti. ⏳
    - Definire i casi d'uso principali (creazione, modifica, cancellazione, ricerca, salvataggio su file).
    - Creare il diagramma UML dei casi d'uso.
-   - Descrivere i casi d'uso
-   - Scrivere un documento con i requisiti.
-   - Classificazione dei requisiti.
-   - Caricare tutto su GitHub.
+   - Descrivere i casi d'uso 
+   - Revisione requisiti e use cases attraverso checklist
+   - Accettazione
+   - Rilascio del documento SRS su GitHub
 
 3. **Progettazione** *(Entro il 21/02/2025)*
    - Progettazione del sistema (mock-up)
@@ -40,4 +44,5 @@ Il progetto è suddiviso nelle seguenti fasi:
 - **GitHub** per il version control.
 - **plantUML** per i diagrammi UML.
 - **IntelliJ IDEA** come IDE per lo sviluppo e testing.
+- **Overleaf** per la stesura dei documenti LaTeX
 
