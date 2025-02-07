@@ -14,13 +14,15 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Scrittura del documento in linguaggio **LaTeX** per i Requirements ✅
    - Scelta di categorizzazione dei requirements in gruppi. ✅
    - Scelta di prioritizzazione dei requisiti. ✅
-   - Definizione preliminare dei requisiti. _In corso.._ ⏳
-   - Definire i casi d'uso principali (creazione, modifica, cancellazione, ricerca, salvataggio su file).
-   - Creare il diagramma UML dei casi d'uso.
-   - Descrivere i casi d'uso 
-   - Revisione requisiti e use cases attraverso checklist
-   - Accettazione
-   - Rilascio del documento SRS su GitHub
+   - Definizione preliminare dei requisiti. ✅
+   - Definizione documento dei requisiti. ✅
+   - Caricamento documento preliminare dei requisiti nella cartella `/docs/Requirements`.
+   - Definire i casi d'uso principali (creazione, modifica, cancellazione, ricerca, salvataggio su file). _In corso.._ ⏳
+   - Creare il diagramma UML dei casi d'uso. _In corso.._ ⏳
+   - Descrivere i casi d'uso. 
+   - Revisione requisiti e use cases attraverso checklist.
+   - Accettazione e unione dei documenti.
+   - Rilascio del documento SRS su GitHub.
 
 3. **Progettazione** *(Entro il 21/02/2025)*
    - Progettazione del sistema (mock-up)
