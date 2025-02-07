@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Glossario dei Termini}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Categorizzazione dei Requisiti}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Functional Requirements (FR)}{3}{subsubsection.1.1.1}%
+\contentsline {paragraph}{Individual Functionalities (IF)}{3}{section*.2}%
+\contentsline {paragraph}{Data Format and Information (DFI)}{3}{section*.3}%
+\contentsline {paragraph}{User Interface (UI)}{3}{section*.4}%
+\contentsline {subsubsection}{\numberline {1.1.2}Non-Functional Requirements (NFR)}{4}{subsubsection.1.1.2}%
+\contentsline {paragraph}{Interface to the System (IS)}{4}{section*.5}%
+\contentsline {paragraph}{Other Constraints (OC)}{4}{section*.6}%
+\contentsline {subsection}{\numberline {1.2}Prioritizzazione dei requisiti}{4}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Business Value (BV)}{4}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Technical Risk (TR)}{4}{subsubsection.1.2.2}%
+\contentsline {section}{\numberline {2}Requirements Definition}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Descrizione}{5}{subsection.2.1}%
+\contentsline {paragraph}{}{5}{section*.7}%
+\contentsline {subsection}{\numberline {2.2}Individual Functionalities (FR-IFxx)}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Aggiunta Contatto (FR-IFAx)}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Rimozione Contatto (FR-IFRx)}{6}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Modifica Contatto (FR-IFMx)}{7}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Ricerca e visualizzazione Contatti (FR-IFSx)}{8}{subsubsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.3}Data Format and Information (FR-DFIxx)}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}User Interface (FR-UIxx)}{9}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Dashboard (FR-UIDx)}{9}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Error Messages (FR-UIEx)}{11}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Usability (FR-UIUx)}{12}{subsubsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.5}Interface to the System (NFR-ISxx)}{13}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Other Constraints NFR-OCxx}{13}{subsubsection.2.5.1}%

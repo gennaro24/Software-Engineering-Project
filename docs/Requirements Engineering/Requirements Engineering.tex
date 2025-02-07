@@ -1,0 +1,419 @@
+%! Author = Foschillo Gennaro
+%! Date = 0/02/2025
+\documentclass[a4paper,12pt]{article}
+
+% Pacchetti utili
+\usepackage{longtable}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lipsum}
+\raggedbottom
+\geometry{left=3cm, right=3cm, top=3cm, bottom=3cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+
+\title{
+    \includegraphics[width=4cm]{../../resources/logo.png} \\[1cm]
+    \textbf{\Large Università degli Studi di Salerno} \\[0.5cm]
+    \textbf{\large Dipartimento di Ingegneria dell'Informazione,\\
+    Elettrica e Matematica Applicata} \\[1.5cm]
+    {\huge Requirements Engineering}
+}
+
+\author{Foschillo Gennaro}
+\date{}
+
+\begin{document}
+
+    \maketitle
+    \thispagestyle{empty}  % Rimuove il numero di pagina sulla copertina
+
+% Inserire l'indice
+    \tableofcontents
+    \newpage
+
+
+    \section{Glossario dei Termini}
+    In questa sezione vengono forniti i termini utilizzati nel documento e una descrizione generale della categorizzazione dei requisiti. Inoltre, si descrive il simbolismo associato ad ogni categoria di requisiti, che sarà utilizzato successivamente.
+
+    \subsection{Categorizzazione dei Requisiti}
+    I requisiti sono suddivisi in due categorie principali: Functional Requirements e Non-Functional Requirements.
+
+    \subsubsection{Functional Requirements (FR)}
+    I requisiti funzionali descrivono le funzionalità che l'applicativo deve necessariamente avere,come esso deve reagire a specifici input e cosa il sistema non deve fare.Ogni requisito appartenente a questa categoria verrà indicato con il codice: FR- seguito da un prefisso che indica il sottogruppo di appartenenza e un numero. I requisiti funzionali vengono ulteriormente suddivisi in 3 categorie principali: \textbf{\textit{Individual Functionalities , Data Format and Information , User Interface}}
+    \paragraph{Individual Functionalities (IF)}
+    Questa categoria descrive le funzionalità offerte dall'applicativo, in termini di: funzionalità di accesso , gestione dell'applicazione e servizi offerti all'utente. Ogni requisito appartenente a questa categoria verrà indicato con il codice: FR-IF seguito da un numero.
+    \paragraph{Data Format and Information (DFI)}
+    In questo sottogruppo di requisiti viene descritto il formato dei dati gestiti dall'applicazione e il loro mantenimento durante l'utilizzo. Ogni requisito appartenente a questa categoria verrà indicato con il codice: FR-DFI seguito da un numero.
+    \paragraph{User Interface (UI)}
+    I requisiti con questo prefisso descrivono l'interfaccia utente e la sua usabilità, in termini di:
+    \begin{itemize}
+        \item \textbf{Dashboard} : Quali informazioni devono essere visualizzate all'interno dell'interfaccia utente.
+        \item \textbf{Messaggi di errore} : Quali messaggi di errore devono essere visualizzati a seguito di azioni non permesse dal sistema
+        \item \textbf{Usabilità del sistema}
+    \end{itemize}
+    Ogni requisito appartenente a questa categoria verrà indicato con il codice: FR-UI seguito da un numero.
+    \subsubsection{Non-Functional Requirements (NFR)}
+% Introduzione alla categoria dei requisiti non funzionali
+    I requisiti non funzionali descrivono i vincoli imposti al sistema da sviluppare. Vengono suddivisi nelle seguenti due categorie: \textbf{\textit{Interface to the System , Other Constraints}}.
+    Ogni requisito appartenente a questa categoria verrà indicato con il prefisso NFR- seguito dal prefisso del sottogruppo di appartenenza ed un numero.
+    \paragraph{Interface to the System (IS)}
+    Questo sottogruppo di requisiti non funzionali descrive come il software deve interfacciarsi al sistema in sviluppo, in termini di:
+    \begin{itemize}
+        \item \textbf{\textit{Strutture dati da utilizzare}}
+        \item \textbf{\textit{Tipi di dati}}
+        \item \textbf{\textit{Interazione tra componenti }}
+        \item \textbf{\textit{Ambiente di sviluppo}}
+        \item \textbf{\textit{Framework da utilizzare}}
+    \end{itemize}
+    \paragraph{Other Constraints (OC)}
+    Qui verranno inseriti vincoli generici a cui non è stato possibile attribuire una categorizzazione.
+    \subsection{Prioritizzazione dei requisiti}
+    In questa sezione verrà descritto il modo in cui vengono assegnate le priorità ai requisiti, considerando due fattori principali: \textbf{\textit{Business Value , Technical Risk}}.
+    \subsubsection{Business Value (BV)}
+    Indica il grado di necessità di implementazione di un requisito. Viene descritto secondo una scala di 3 valori:
+    \begin{itemize}
+        \item \textbf{\textit{Must Have (MH)}}: Requisito necessario per il corretto funzionamento del sistema.
+        \item  \textbf{\textit{Should Have (SH)}}: Requisito importante ma non necessario per il corretto funzionamento del sistema.
+        \item \textbf{\textit{Nice to Have (NH)}} Requisito da soddisfare solo se non comporta un rischio elevato di fallimento.
+    \end{itemize}
+    \subsubsection{Technical Risk (TR)}
+    Indica il rischio di realizzazione di un requisito. Viene misurato attraverso una scala di 3 valori:
+    \begin{itemize}
+        \item \textbf{\textit{Alto}}: Probabilità di non riuscire a realizzare il requisito nei tempi previsti molto alta
+        \item \textbf{\textit{Medio}}: Rischio medio di realizzazione , dovuto a fattori non controllabili
+        \item \textbf{\textit{Basso}}: Requisito che si ritiene sicuramente realizzabile nei tempi previsti
+    \end{itemize}
+    \section{Requirements Definition}
+    \subsection{Descrizione}
+    \paragraph{} L'obiettivo di questo documento è quello di definire i requisiti di un applicazione per la gestione dei contatti in una rubrica. In particolare, le funzioni principali sono: \textbf{\textit{Aggiunta , Modifica , Cancellazione , Ricerca .}} Di seguito verranno elencati requisiti nel dettaglio
+    \subsection{Individual Functionalities (FR-IFxx)}
+    \subsubsection{Aggiunta Contatto (FR-IFAx)}
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|l|p{8cm}|l|l|}
+            \hline
+            \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+            \hline
+            FR-IFA0 & L'utente può aggiungere un contatto alla rubrica. &
+            MH &
+            Basso \\
+            \hline
+            FR-IFA1 & All'aggiunta di un contatto, l'utente può specificare nome e/o cognome & MH & Basso \\
+            \hline
+            FR-IFA2 & All'aggiunta di un contatto, se non è presente almeno un campo nome o cognome l'aggiunta non viene effettuata. & MH & Basso \\
+            \hline
+            FR-IFA3 & All'aggiunta di un contatto l'utente può inserire da 0 a 3 indirizzi e-mail. & MH & Medio \\
+            \hline
+            FR-IFA4 & All'aggiunta di un contatto l'utente può inserire da 0 a 3 numeri di telefono. & MH & Medio \\
+            \hline
+            FR-IFA5 & All'aggiunta di un contatto , l'utente deve confermare l'aggiunta prima di essere salvato all'interno della lista. & SH & Basso \\
+            \hline
+            FR-IFA6 & All'aggiunta di un contatto , l'utente può uscire dall'operazione, con conseguente non salvataggio delle modifiche & NH & Medio \\
+            \hline
+            FR-IFA7 & Alla conferma dell'aggiunta di un contatto andata a buon fine , la lista verrà aggiornata interamente e salvata. & SH & Basso \\
+            \hline
+        \end{tabular}
+        \caption{Tabella dei requisiti per l’aggiunta del contatto (A).}
+    \end{table}
+    \subsubsection{Rimozione Contatto (FR-IFRx)}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|p{8cm}|l|l|}
+            \hline
+            \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+            \hline
+            FR-IFR0 & L'utente può rimuovere un contatto presente nella lista dei contatti. & MH & Basso \\
+            \hline
+            FR-IFR1 & Dopo la rimozione del contatto la lista deve essere aggiornata e salvata. & MH & Basso
+            \\
+            \hline
+            FR-IFR2 & Durante la rimozione l'utente può confermare la decisione. Dopo la conferma, il contatto sarà eliminato dalla lista con conseguente salvataggio e aggiornamento della lista di contatti & SH & Medio
+            \\
+            \hline
+            FR-IFR3 & Durante la rimozione l'utente può uscire dall'operazione, con conseguente non eliminazione del contatto. & NH & Medio
+            \\
+            \hline
+        \end{tabular}
+        \caption{Tabella dei requisiti per la rimozione dei contatti (R).}
+    \end{table}
+    \nopagebreak
+    \subsubsection{Modifica Contatto (FR-IFMx)}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|p{8cm}|l|l|}
+            \hline
+            \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+            \hline
+            FR-IFM0 & L'utente può modificare un contatto solo se presente nella lista dei contatti. & MH & Basso \\
+            \hline
+            FR-IFM1 & Durante la modifica di un contatto, l'utente può modificare il nome ed il cognome.  & MH & Basso
+            \\
+            \hline
+            FR-IFM2 & Durante la modifica di un contatto , l'utente può eliminare il nome o il cognome , ma non entrambi i campi. & MH & Basso
+            \\
+            \hline
+            FR-IFM3 & Durante la modifica di un contatto, l'utente può modificare, eliminare uno o tutti gli indirizzi e-mail presenti all'interno del contatto.  & MH & Basso
+            \\
+            \hline
+            FR-IFM4 & Durante la modifica di un contatto, l'utente può modificare, eliminare uno o tutti i numeri di telefono presenti all'interno del contatto. & MH & Basso
+            \\
+            \hline
+            FR-IFM5 & Terminata la modifica di un contatto, la lista sarà aggiornata e salvata con le nuove informazioni & MH & Basso
+            \\
+            \hline
+            FR-IFM6 & Terminata la modifica di un contatto , l'utente potrà confermare la scelta, con conseguente salvataggio e aggiornamento della lista dei contatti. & SH & Medio
+            \\
+            \hline
+            FR-IFM7 & Durante la modifica di un contatto , l'utente può uscire dall'operazione, con conseguente salvataggio e aggiornamento della lista dei contatti. & NH & Medio
+            \\
+            \hline
+        \end{tabular}
+        \caption{Tabella dei requisiti per la modifica dei contatti (M).}
+    \end{table}
+    \nopagebreak
+    \subsubsection{Ricerca e visualizzazione Contatti (FR-IFSx)}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|p{8cm}|l|l|}
+            \hline
+            \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+            \hline
+            FR-IFS0 & L'utente può cercare un contatto presente all'interno della lista dei contatti. & MH & Basso \\
+            \hline
+            FR-IFS1 & L'utente può cercare un contatto inserendo nella ricerca il nome o una sottostringa di esso. & MH & Medio \\
+            \hline
+            FR-IFS2 & L'utente può cercare un contatto inserendo nella ricerca il cognome o una sottostringa di esso. & MH & Medio \\
+            \hline
+            FR-IFS3 & L'utente non può cercare un contatto inserendo nella ricerca l'indirizzo e-mail o il numero di telefono. & MH & Basso \\
+            \hline
+            FR-IFS4 & L'utente, dopo aver performato la ricerca, visualizzerà i risultati in ordine alfabetico se la ricerca è andata a buon fine & MH & Basso \\
+            \hline
+            FR-IFS5 & L'utente, dopo aver performato la ricerca , non visualizzerà alcun contatto se la ricerca non è andata a buon fine. & MH & Basso \\
+            \hline
+        \end{tabular}
+        \caption{Tabella dei requisiti per la ricerca e visualizzazione dei contatti (S).}
+    \end{table}
+    \subsection{Data Format and Information (FR-DFIxx)}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|p{8cm}|l|l|}
+            \hline
+            \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+            \hline
+            FR-DFI00 & L'applicativo deve salvare i contatti attraverso file, garantendo la persistenza dei dati tra una sessione e l'altra. & MH & Basso \\
+            \hline
+            FR-DFI01 & L'applicativo deve caricare il file contenente i contatti ad ogni avvio per popolare la rubrica. & MH & Basso \\
+            \hline
+            FR-DFI02 & All'avvio dell'applicazione, se il file da caricare è vuoto o non esiste, verrà creata una rubrica vuota. & MH & Basso \\
+            \hline
+            FR-DFI03 & Ogni contatto che viene salvato su file deve avere il seguente formato: nome, cognome (almeno uno dei due) , 0-3 indirizzi e-mail , 0-3 numeri di telefono. & MH & Basso \\
+            \hline
+        \end{tabular}
+        \caption{Tabella dei requisiti per le informazioni sui dati , formato dei dati e persistenza. (S).}
+    \end{table}
+    \subsection{User Interface (FR-UIxx)}
+    \subsubsection{Dashboard (FR-UIDx)}
+
+    \begin{longtable}{|l|p{8cm}|l|l|}
+        \caption{Tabella dei requisiti per la Dashboard.} \\
+
+        \hline
+        \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+        \hline
+        \endfirsthead
+
+        \multicolumn{4}{c}{\footnotesize \textit{Tabella dei requisiti per la Dashboard (continuo)}}\\
+        \hline
+        \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+        \hline
+        \endhead
+
+        FR-UID0  & L'utente all'avvio dell'applicazione dovrà visualizzare un messaggio
+        di caricamento fino a che il file in cui sono presenti i contatti non sarà caricato. & MH & Basso \\
+        \hline
+        FR-UID1  & Dopo il caricamento, l'utente visualizzerà la Dashboard. Se il file è vuoto,
+        l'utente non visualizzerà nessun contatto. & MH & Basso \\
+        \hline
+        FR-UID2  & All'interno della Dashboard l'utente visualizzerà la lista dei contatti ordinati alfabeticamente.
+        & MH & Basso \\
+        \hline
+        FR-UID3  & All'interno della Dashboard l'utente potrà aggiungere un contatto
+        attraverso l'apposito bottone \texttt{+}. & MH & Basso \\
+        \hline
+        FR-UID4  & All'interno della Dashboard l'utente potrà modificare un contatto
+        attraverso l'apposito bottone di modifica. & MH & Basso \\
+        \hline
+        FR-UID5  & All'interno della Dashboard l'utente potrà scorrere la lista dei contatti. & MH & Basso \\
+        \hline
+        FR-UID6  & Quando l'utente selezionerà l'opzione \texttt{+} (F-UID3), visualizzerà un menù contestuale. & MH & Basso \\
+        \hline
+        FR-UID7  & All'interno del menù contestuale, l'utente potrà inserire, attraverso
+        due campi di testo separati, nome e cognome. & MH & Basso \\
+        \hline
+        FR-UID8  & All'interno del menù contestuale, l'utente potrà inserire,
+        attraverso un massimo di 3 campi di testo, gli indirizzi e-mail. & MH & Basso \\
+        \hline
+        FR-UID9  & All'interno del menù contestuale, l'utente potrà inserire,
+        attraverso un massimo di 3 campi di testo, i numeri di telefono. & MH & Basso \\
+        \hline
+        FR-UID10 & All'interno del menù contestuale, l'utente potrà confermare
+        l'aggiunta attraverso un campo di conferma. & SH & Medio \\
+        \hline
+        FR-UID11 & All'interno del menù contestuale, l'utente potrà tornare alla dashboard
+        senza effettuare l'aggiunta attraverso un campo \texttt{Annulla}. & NH & Medio \\
+        \hline
+        FR-UID12 & All'interno della Dashboard, il bottone di modifica sarà disattivato
+        se non sono presenti contatti all'interno della lista. & MH & Basso \\
+        \hline
+        FR-UID13 & Quando l'utente selezionerà l'opzione di modifica contatto, visualizzerà
+        un menù contestuale (come descritto dai req. FR-UID7--FR-UID11) in cui potrà
+        modificare i campi esistenti, eliminarli o aggiungerli ove possibile. & MH & Basso \\
+        \hline
+        FR-UID14 & All'interno della Dashboard l'utente potrà eliminare un contatto
+        attraverso l'apposito bottone di eliminazione. & MH & Basso \\
+        \hline
+        FR-UID15 & Il bottone di eliminazione è utilizzabile solo se la lista di contatti non è vuota. & MH & Basso \\ \hline
+        FR-UID16  & Il bottone di modifica è utilizzabile solo se la lista di contatti non è vuota. & MH & Basso \\ \hline
+        FR-UID16 & All'interno della Dashboard è presente una barra di ricerca, in cui l'utente può cercare i contatti per nome e/o cognome. L'utente può confermare la ricerca attraverso l'apposito bottone "Cerca" & MH & Basso \\ \hline
+        FR-UID17 & Quando la ricerca verrà effettuata, l'utente visualizzerà la lista dei contatti coerente con la ricerca in ordine alfabetico. Se non è presente alcun contatto che corrisponde alla ricerca, l'utente visualizzerà la lista dei contatti vuota. & MH & Basso \\ \hline
+        FR-UID18 & Quando la ricerca viene confermata, dopo la visualizzazione dei risultati , l'utente può ritornare alla Dashboard attraverso il bottone "Indietro" & SH & Basso \\ \hline
+    \end{longtable}
+    \subsubsection{Error Messages (FR-UIEx)}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|p{8cm}|l|l|}
+            \hline
+            \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+            \hline
+            FR-UIE1 &
+            All'interno del contesto di modifica e aggiunta di un contatto,
+            se l'utente non inserisce almeno un campo tra \texttt{nome} e \texttt{cognome}
+            e conferma l'operazione, verrà visualizzato il messaggio di errore:
+            \textit{“Uno dei campi nome e cognome non può essere vuoto.”} & MH & Basso \\
+            \hline
+
+            FR-UIE2 &
+            Se l'utente prova ad inserire più di 3 indirizzi e-mail per lo stesso contatto,
+            verrà visualizzato un messaggio di errore:
+            \textit{“Non puoi inserire più di 3 indirizzi e-mail per contatto.”} & MH & Basso \\
+            \hline
+
+            FR-UIE3 &
+            Se l'utente prova ad inserire più di 3 numeri di telefono per lo stesso contatto,
+            verrà visualizzato un messaggio di errore:
+            \textit{“Non puoi inserire più di 3 numeri di telefono per contatto.”} & MH & Basso \\
+            \hline
+
+            FR-UIE4 &
+            Se l'utente inserisce un indirizzo e-mail in un formato non valido
+            (e.g. privo di chiocciola \texttt{@}), verrà visualizzato un messaggio di errore:
+            \textit{“L’indirizzo e-mail inserito non è valido.”} & SH & Basso \\
+            \hline
+
+            FR-UIE5 &
+            Se l'utente inserisce un numero di telefono in un formato ritenuto non valido
+            (es. lettere al posto di cifre), verrà visualizzato un messaggio di errore:
+            \textit{“Il numero di telefono inserito non è valido.”} & SH & Basso \\
+            \hline
+
+            FR-UIE6 &
+            Se l'utente tenta di rimuovere o modificare un contatto che non esiste più in lista
+            (ad es. è stato rimosso durante l’operazione da un altro processo o è corrotto),
+            verrà visualizzato un messaggio di errore:
+            \textit{“Il contatto selezionato non esiste o è già stato eliminato.”} & SH & Basso \\
+            \hline
+        \end{tabular}
+        \caption{Tabella dei requisiti per la gestione dei messaggi di errore (E).}
+    \end{table}
+    \subsubsection{Usability (FR-UIUx)}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|p{8cm}|l|l|}
+            \hline
+            \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+            \hline
+            FR-UIU0 &
+            L'interfaccia deve mantenere uno stile coerente in tutte le viste (Dashboard, menù contestuali, ecc.),
+            con pulsanti e label sempre nella stessa posizione e dimensione.
+            & MH & Basso \\
+            \hline
+            FR-UIU1 &
+            I testi e i bottoni dell'interfaccia devono avere dimensioni tali
+            da garantire una leggibilità adeguata su uno schermo di almeno 1280x720.
+            & SH & Basso \\
+            \hline
+            FR-UIU2 &
+            Le operazioni principali (Aggiunta, Modifica, Rimozione di un contatto)
+            non devono richiedere più di 3 click per essere completate, dall'apertura della Dashboard al salvataggio finale.
+            & SH & Medio \\
+            \hline
+            FR-UIU3 &
+            Il sistema deve fornire un feedback visivo chiaro quando l'utente esegue operazioni di ricerca, aggiunta, modifica o rimozione.
+            & SH & Basso \\
+            \hline
+            FR-UIU4 &
+            Le icone utilizzate (per aggiungere, modificare, rimuovere un contatto)
+            devono essere intuitive e coerenti con gli standard di design comuni (ad es. un'icona “+” per aggiungere).
+            & MH & Basso \\
+            \hline
+            FR-UIU5 &
+            In caso di errori (come da sezione FR-UIEx), l'utente deve visualizzare messaggi chiari e comprensibili,
+            con eventuali suggerimenti su come risolvere il problema.
+            & MH & Basso \\
+            \hline
+            FR-UIU6 &
+            Il sistema deve impedire l’avvio di un’operazione (es. modifica/eliminazione)
+            se non è presente alcun contatto selezionato, evitando click “inutili”.
+            & SH & Basso \\
+            \hline
+        \end{tabular}
+        \caption{Tabella dei requisiti di usabilità (UIU).}
+    \end{table}
+    \subsection{Interface to the System (NFR-ISxx)}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|p{8cm}|l|l|}
+            \hline
+            \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+            \hline
+            NFR-IS00 & L'applicativo deve essere sviluppato \textbf{\textit{Java}} , compreso di interfaccia grafica realizzata con il framework \textbf{\textit{JavaFX}} , utilizzando il pattern MVC. & MH & Basso \\
+            \hline
+            NFR-IS01 & L'applicativo deve utilizzare file \textbf{\textit{JSON}} per la memorizzazione e caricamento dei dati riguardanti i contatti, seguendo il seguente pattern: \texttt{\{ "contacts": [ \{ "name": "...", "surname": "...", "emails": [...], "phones": [...] \}, ... ]\}}. & MH & Basso \\
+            \hline
+            NFR-IS02 & Il campo "nome" e "cognome" sono identificati rispettivamente da due stringhe, ognuna di lunghezza massima di 50 caratteri. & MH & Basso \\
+            \hline
+            NFR-IS03 & Il campo e-mail è identificato da una stringa che presenta il seguente pattern: nomeEmail@mailAgent.dominio . Inoltre, non devono essere presenti caratteri speciali o spazi. & MH & Basso \\
+            \hline
+            NFR-IS04 & Il campo numero di telefono è identificato da una stringa contenente solo cifre [0-9], con una lunghezza minima di 3 e massima di 15. Non sono ammessi spazi o caratteri speciali. & MH & Basso \\
+            \hline
+            NFR-IS05 & La struttura dati da utilizzare è L'ObservableList, così che i cambiamenti vengano riflessi in modo automatico all'interno dell'interfaccia grafica. & SH & Basso \\
+            \hline
+            \hline
+        \end{tabular}
+        \caption{Tabella dei requisiti di Interfacciamento al Sistema in Sviluppo (IS).}
+    \end{table}
+    \subsubsection{Other Constraints NFR-OCxx}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|p{8cm}|l|l|}
+            \hline
+            \textbf{Codice} & \textbf{Descrizione} & \textbf{BV} & \textbf{TR} \\
+            \hline
+            NFR-OC01 & L'applicativo deve garantire un tempo di caricamento con 1000 contatti di massimo 3 secondi. & SH & Medio \\
+            \hline
+            NFR-OC02 & L'applicativo deve evitare crash improvvisi senza un report dell'errore dettagliato. & NH & Medio \\
+            \hline
+        \end{tabular}
+        \caption{Tabella di requisiti non funzionali generici (OC).}
+    \end{table}
+\end{document}
+
