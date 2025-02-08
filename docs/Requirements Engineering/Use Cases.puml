@@ -1,0 +1,43 @@
+@startuml
+left to right direction
+Actor "utente" as User
+package "Rubrica contatti: Dashboard"{
+
+
+'Usecases principali:
+usecase "Aggiunta Contatto" as UC1
+usecase "Modifica Contatto" as UC2
+usecase "Rimozione Contatto" as UC3
+usecase "Ricerca Contatto" as UC4
+usecase "Aggiornamento rubrica" as UC5
+usecase "Carica File" as CF
+usecase "Salva File" as SF
+'casi di include:
+usecase "Conferma" as Conf
+usecase "Indietro" as Ind
+}
+package "Error Messages"{
+'casi di extends
+usecase "MailFormatError" as MFE
+usecase "NumberFormatError" as NFE
+usecase "FileError" as LE
+usecase "SearchError" as SE
+usecase "NameSurnameError" as NSE
+}
+CF <.. LE : <<extends>>
+SF <.. SE : <<extends>>
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> CF
+User --> SF
+UC1 <... NSE : <<extends>>
+UC1 ...> Conf : includes
+    Conf ...> UC5 : <<includes>>
+    Conf <... MFE : <<extends>>
+    Conf <... NFE : <<extends>>
+UC1 <.. Ind : <<extends>>
+UC2 ..> Conf : <<includes>>
+UC2 <.. Ind : <<extends>>
+@enduml

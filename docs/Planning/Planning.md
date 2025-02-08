@@ -17,9 +17,9 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Definizione preliminare dei requisiti. ✅
    - Definizione documento dei requisiti. ✅
    - Caricamento documento preliminare dei requisiti nella cartella `/docs/Requirements`. ✅
-   - Definire i casi d'uso principali (creazione, modifica, cancellazione, ricerca, salvataggio su file). _In corso.._ ⏳
+   - Definire i casi d'uso principali (creazione, modifica, cancellazione, ricerca, salvataggio su file). _In corso.._ ✅
    - Creare il diagramma UML dei casi d'uso. _In corso.._ ⏳
-   - Descrivere i casi d'uso. 
+   - Descrivere i casi d'uso. ✅ 
    - Revisione requisiti e use cases attraverso checklist.
    - Accettazione e unione dei documenti.
    - Rilascio del documento SRS su GitHub.
@@ -42,9 +42,11 @@ Il progetto è suddiviso nelle seguenti fasi:
 
 ## 🛠️ Strumenti Utilizzati
 - **Java** per lo sviluppo.
+- **JavaFX** per lo sviluppo di interfacce grafiche.
 - **JUnit** per il testing.
 - **GitHub** per il version control.
 - **plantUML** per i diagrammi UML.
 - **IntelliJ IDEA** come IDE per lo sviluppo e testing.
-- **Overleaf** per la stesura dei documenti LaTeX
+- **Overleaf** per la stesura preliminare dei documenti LaTeX
+- **Texify IDEA** per la compilazione dei documenti LaTeX e produzione della documentazione in pdf.
 
