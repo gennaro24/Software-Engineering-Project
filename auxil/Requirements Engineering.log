@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.7)  7 FEB 2025 17:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.7)  8 FEB 2025 17:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -24,44 +24,64 @@ File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
 )
+(C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\enitkv@toks@=\toks17
+\labelindent=\skip51
+\enit@outerparindent=\dimen142
+\enit@toks=\toks18
+\enit@inbox=\box52
+\enit@count@id=\count270
+\enitdp@description=\count271
+)
+(C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen143
+\ar@mcellbox=\box53
+\extrarowheight=\dimen144
+\NC@list=\toks19
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box54
+)
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
-\LTleft=\skip51
-\LTright=\skip52
-\LTpre=\skip53
-\LTpost=\skip54
-\LTchunksize=\count270
-\LTcapwidth=\dimen142
-\LT@head=\box52
-\LT@firsthead=\box53
-\LT@foot=\box54
-\LT@lastfoot=\box55
-\LT@gbox=\box56
-\LT@cols=\count271
-\LT@rows=\count272
-\c@LT@tables=\count273
-\c@LT@chunks=\count274
-\LT@p@ftn=\toks17
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count272
+\LTcapwidth=\dimen145
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@gbox=\box59
+\LT@cols=\count273
+\LT@rows=\count274
+\c@LT@tables=\count275
+\c@LT@chunks=\count276
+\LT@p@ftn=\toks20
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count275
-\float@exts=\toks18
-\float@box=\box57
-\@float@everytoks=\toks19
-\@floatcapt=\box58
+\c@float@type=\count277
+\float@exts=\toks21
+\float@box=\box60
+\@float@everytoks=\toks22
+\@floatcapt=\box61
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
-\inpenc@prehook=\toks20
-\inpenc@posthook=\toks21
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
+\KV@toks@=\toks25
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
@@ -78,8 +98,8 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen143
-\Gin@req@width=\dimen144
+\Gin@req@height=\dimen146
+\Gin@req@width=\dimen147
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -90,44 +110,54 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count276
-\Gm@cntv=\count277
-\c@Gm@tempcnt=\count278
-\Gm@bindingoffset=\dimen145
-\Gm@wd@mp=\dimen146
-\Gm@odd@mp=\dimen147
-\Gm@even@mp=\dimen148
-\Gm@layoutwidth=\dimen149
-\Gm@layoutheight=\dimen150
-\Gm@layouthoffset=\dimen151
-\Gm@layoutvoffset=\dimen152
-\Gm@dimlist=\toks23
+\Gm@cnth=\count278
+\Gm@cntv=\count279
+\c@Gm@tempcnt=\count280
+\Gm@bindingoffset=\dimen148
+\Gm@wd@mp=\dimen149
+\Gm@odd@mp=\dimen150
+\Gm@even@mp=\dimen151
+\Gm@layoutwidth=\dimen152
+\Gm@layoutheight=\dimen153
+\Gm@layouthoffset=\dimen154
+\Gm@layoutvoffset=\dimen155
+\Gm@dimlist=\toks26
 
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen156
+\TX@old@table=\dimen157
+\TX@old@col=\dimen158
+\TX@target=\dimen159
+\TX@delta=\dimen160
+\TX@cols=\count281
+\TX@ftn=\toks27
+)
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip55
-\thanksmargin=\skip56
-\droptitle=\skip57
+\thanksmarkwidth=\skip58
+\thanksmargin=\skip59
+\droptitle=\skip60
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/01/07 v5.1.1 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip58
-\f@nch@offset@elh=\skip59
-\f@nch@offset@erh=\skip60
-\f@nch@offset@olh=\skip61
-\f@nch@offset@orh=\skip62
-\f@nch@offset@elf=\skip63
-\f@nch@offset@erf=\skip64
-\f@nch@offset@olf=\skip65
-\f@nch@offset@orf=\skip66
-\f@nch@height=\skip67
-\f@nch@footalignment=\skip68
-\f@nch@widthL=\skip69
-\f@nch@widthC=\skip70
-\f@nch@widthR=\skip71
-\@temptokenb=\toks24
+\f@nch@headwidth=\skip61
+\f@nch@offset@elh=\skip62
+\f@nch@offset@erh=\skip63
+\f@nch@offset@olh=\skip64
+\f@nch@offset@orh=\skip65
+\f@nch@offset@elf=\skip66
+\f@nch@offset@erf=\skip67
+\f@nch@offset@olf=\skip68
+\f@nch@offset@orf=\skip69
+\f@nch@height=\skip70
+\f@nch@footalignment=\skip71
+\f@nch@widthL=\skip72
+\f@nch@widthC=\skip73
+\f@nch@widthR=\skip74
+\@temptokenb=\toks28
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
@@ -175,20 +205,20 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count279
+\c@section@level=\count282
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count280
+\etb@tempcnta=\count283
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
 ty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen153
-\Hy@linkcounter=\count281
-\Hy@pagecounter=\count282
+\@linkdim=\dimen161
+\Hy@linkcounter=\count284
+\Hy@pagecounter=\count285
  (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -196,7 +226,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count283
+\Hy@SavedSpaceFactor=\count286
  (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -209,14 +239,14 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count284
+\c@Hy@tempcnt=\count287
 
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen154
+\XeTeXLinkMargin=\dimen162
 
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -226,9 +256,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count285
-\Field@Width=\dimen155
-\Fld@charsize=\dimen156
+\Fld@menulength=\count288
+\Field@Width=\dimen163
+\Fld@charsize=\dimen164
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -241,9 +271,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count286
-\c@Item=\count287
-\c@Hfootnote=\count288
+\Hy@abspage=\count289
+\c@Item=\count290
+\c@Hfootnote=\count291
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -254,8 +284,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count289
-\c@bookmark@seq@number=\count290
+\Fld@listcount=\count292
+\c@bookmark@seq@number=\count293
 
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -268,7 +298,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip72
+\Hy@SectionHShift=\skip75
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
@@ -279,15 +309,15 @@ Package: expl3 2025-01-18 L3 programming layer (loader)
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
-\l__pdf_internal_box=\box59
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box62
 ))
 Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count292
-\l__lipsum_a_int=\count293
-\l__lipsum_b_int=\count294
+\g__lipsum_par_int=\count295
+\l__lipsum_a_int=\count296
+\l__lipsum_b_int=\count297
 
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
 
@@ -295,39 +325,39 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 ring.aux)
 \openout1 = `"Requirements Engineering.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count295
-\scratchdimen=\dimen157
-\scratchbox=\box60
-\nofMPsegments=\count296
-\nofMParguments=\count297
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count298
-\MPscratchDim=\dimen158
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count298
+\scratchdimen=\dimen165
+\scratchbox=\box63
+\nofMPsegments=\count299
+\nofMParguments=\count300
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count301
+\MPscratchDim=\dimen166
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
+\everyMPtoPDFconversion=\toks30
 )
 (C:\Users\fosch\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -373,7 +403,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 34.
+Package hyperref Info: Link coloring OFF on input line 43.
 
 (C:/Users\fosch\Desktop\Software-Engineering-Project\auxil\Requirements Enginee
 ring.out)
@@ -382,15 +412,15 @@ ring.out)
 \@outlinefile=\write3
 \openout3 = `"Requirements Engineering.out"'.
 
-<../../resources/logo.png, id=87, 351.3125pt x 351.3125pt>
+<../../resources/logo.png, id=91, 351.3125pt x 351.3125pt>
 File: ../../resources/logo.png Graphic file (type png)
 <use ../../resources/logo.png>
-Package pdftex.def Info: ../../resources/logo.png  used on input line 37.
+Package pdftex.def Info: ../../resources/logo.png  used on input line 46.
 (pdftex.def)             Requested size: 113.81102pt x 113.81068pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 37.
+(Font)              <14.4> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 37.
+(Font)              <7> on input line 46.
 
 (C:/Users\fosch\Desktop\Software-Engineering-Project\auxil\Requirements Enginee
 ring.toc
@@ -412,7 +442,7 @@ ces/logo.png>])
 
 
 [2]
-Overfull \hbox (34.82954pt too wide) in paragraph at lines 59--60
+Overfull \hbox (34.82954pt too wide) in paragraph at lines 70--71
 []\OT1/cmr/bx/n/12 Dashboard \OT1/cmr/m/n/12 : Quali in-for-mazioni de-vono es-
 sere vi-su-al-iz-zate all'interno dell'interfaccia
  []
@@ -424,8 +454,8 @@ sere vi-su-al-iz-zate all'interno dell'interfaccia
 [4]
 
 [5]
-Underfull \hbox (badness 1577) in paragraph at lines 173--173
-[]\OT1/cmr/m/n/12 Terminata la mod-i-fica di un con-tatto ,
+Underfull \hbox (badness 1577) in paragraph at lines 184--184
+[]|\OT1/cmr/m/n/12 Terminata la mod-i-fica di un con-tatto ,
  []
 
 
@@ -433,77 +463,165 @@ Underfull \hbox (badness 1577) in paragraph at lines 173--173
 [6]
 
 [7]
-Underfull \hbox (badness 1803) in paragraph at lines 212--212
-[]\OT1/cmr/m/n/12 L'applicativo deve sal-vare i con-tatti at-
+Underfull \hbox (badness 1803) in paragraph at lines 224--224
+[]|\OT1/cmr/m/n/12 L'applicativo deve sal-vare i con-tatti at-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 277--279
+
+[8]
+Underfull \hbox (badness 2495) in paragraph at lines 291--293
 []|\OT1/cmr/m/n/12 Quando l'utente se-lezioner^^Ra l'opzione di
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 286--286
+Underfull \hbox (badness 2020) in paragraph at lines 300--300
+[]|\OT1/cmr/m/n/12 al click del bot-tone di elim-i-nazione, si
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 301--301
 \OT1/cmr/m/n/12 care i con-tatti per nome e/o cog-nome.
  []
 
-
-
-[8] [9]
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 374--376
-[]\OT1/cmr/m/n/12 Il sis-tema deve im-pedire l'avvio di
- []
-
-
+[9] [10]
 
 [11]
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-390.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 390.
-
-
-LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 390.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
-\OT1/cmr/m/n/12 pat-tern: \OMS/cmtt/m/n/12 f \OT1/cmtt/m/n/12 "contacts": [ \OM
-S/cmtt/m/n/12 f \OT1/cmtt/m/n/12 "name":
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
-\OT1/cmtt/m/n/12 "...", "surname": "...", "emails":
- []
-
-
-Underfull \hbox (badness 3375) in paragraph at lines 394--394
-[]\OT1/cmr/m/n/12 Il campo e-mail ^^Re iden-ti-fi-cato da una
- []
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 394--394
-\OT1/cmr/m/n/12 stringa che pre-senta il seguente pat-tern:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 398--398
-[]\OT1/cmr/m/n/12 La strut-tura dati da uti-liz-zare ^^Re
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 398--398
-\OT1/cmr/m/n/12 L'ObservableList, cos^^R^^P che i cam-bi-a-
+Underfull \hbox (badness 10000) in paragraph at lines 393--395
+[]|\OT1/cmr/m/n/12 Il sis-tema deve im-pedire l'avvio di
  []
 
 
 
 [12]
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
+409.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 409.
+
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 409.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+\OT1/cmr/m/n/12 pat-tern: \OMS/cmtt/m/n/12 f \OT1/cmtt/m/n/12 "contacts": [ \OM
+S/cmtt/m/n/12 f \OT1/cmtt/m/n/12 "name":
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+\OT1/cmtt/m/n/12 "...", "surname": "...", "emails":
+ []
+
+
+Underfull \hbox (badness 3375) in paragraph at lines 413--413
+[]|\OT1/cmr/m/n/12 Il campo e-mail ^^Re iden-ti-fi-cato da una
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 413--413
+\OT1/cmr/m/n/12 stringa che pre-senta il seguente pat-tern:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+[]|\OT1/cmr/m/n/12 La strut-tura dati da uti-liz-zare ^^Re
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+\OT1/cmr/m/n/12 L'ObservableList, cos^^R^^P che i cam-bi-a-
+ []
+
+
 
 [13]
+Underfull \hbox (badness 7722) in paragraph at lines 466--466
+\OT1/cmr/m/n/12 cari-ca-mento e vi-su-al-izza la
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 466--466
+\OT1/cmr/m/n/12 4. L'applicativo mostra il
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
+
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in alignment at lines 466--466
+[][] 
+ []
+
+
+
+[14]
+
+[15]
+Underfull \hbox (badness 7722) in paragraph at lines 498--498
+\OT1/cmr/m/n/12 cari-ca-mento e vi-su-al-izza la
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 498--498
+\OT1/cmr/m/n/12 5. L'applicativo mostra il
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in alignment at lines 498--498
+[][] 
+ []
+
+
+
+[16]
+Underfull \hbox (badness 7722) in paragraph at lines 530--530
+\OT1/cmr/m/n/12 cari-ca-mento e vi-su-al-izza la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--530
+
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in alignment at lines 530--530
+[][] 
+ []
+
+
+
+[17]
+Underfull \hbox (badness 7722) in paragraph at lines 561--561
+\OT1/cmr/m/n/12 cari-ca-mento e vi-su-al-izza la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--561
+\OT1/cmr/m/n/12 con-tatti cor-rispon-dente alla
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--561
+
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in alignment at lines 561--561
+[][] 
+ []
+
+
+
+[18]
 (C:/Users\fosch\Desktop\Software-Engineering-Project\auxil\Requirements Enginee
 ring.aux)
  ***********
@@ -516,16 +634,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `"Requirements Engineering".out' has not chan
 ged.
-(rerunfilecheck)             Checksum: A9C5BC2EA7184327A7744D6E3D5C56E6;4320.
+(rerunfilecheck)             Checksum: FC6085BCE1CAC5A945826058E9FA3C71;4461.
  ) 
 Here is how much of TeX's memory you used:
- 10076 strings out of 473530
- 164309 string characters out of 5714795
- 677087 words of memory out of 5000000
- 33133 multiletter control sequences out of 15000+600000
+ 10568 strings out of 473530
+ 172396 string characters out of 5714795
+ 690437 words of memory out of 5000000
+ 33587 multiletter control sequences out of 15000+600000
  566169 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,93p,569b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,13n,93p,718b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\fosch\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Users/fosch/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/fosch/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -538,9 +656,9 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/User
 s/fosch/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 >
 Output written on "C:/Users\fosch\Desktop\Software-Engineering-Project\out\Requ
-irements Engineering.pdf" (13 pages, 263578 bytes).
+irements Engineering.pdf" (18 pages, 276128 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 298 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 
