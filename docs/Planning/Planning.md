@@ -18,9 +18,9 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Definizione documento dei requisiti. ✅
    - Caricamento documento preliminare dei requisiti nella cartella `/docs/Requirements`. ✅
    - Definire i casi d'uso principali (creazione, modifica, cancellazione, ricerca, salvataggio su file). _In corso.._ ✅
-   - Creare il diagramma UML dei casi d'uso. _In corso.._ ⏳
+   - Creare il diagramma UML dei casi d'uso. ✅
    - Descrivere i casi d'uso. ✅ 
-   - Revisione requisiti e use cases attraverso checklist.
+   - Revisione requisiti e use cases attraverso checklist. _In corso.._ ⏳ 
    - Accettazione e unione dei documenti.
    - Rilascio del documento SRS su GitHub.
 
