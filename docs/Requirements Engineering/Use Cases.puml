@@ -9,35 +9,45 @@ usecase "Aggiunta Contatto" as UC1
 usecase "Modifica Contatto" as UC2
 usecase "Rimozione Contatto" as UC3
 usecase "Ricerca Contatto" as UC4
-usecase "Aggiornamento rubrica" as UC5
 usecase "Carica File" as CF
 usecase "Salva File" as SF
+usecase "Conferma ricerca" as UC4.1
 'casi di include:
 usecase "Conferma" as Conf
 usecase "Indietro" as Ind
 }
+package "System" {
+usecase "Aggiornamento rubrica" as UC5
+}
 package "Error Messages"{
 'casi di extends
+package "Format Error Messages" as FEM {
 usecase "MailFormatError" as MFE
 usecase "NumberFormatError" as NFE
-usecase "FileError" as LE
+}
+usecase "FileError" as FE
 usecase "SearchError" as SE
 usecase "NameSurnameError" as NSE
 }
-CF <.. LE : <<extends>>
-SF <.. SE : <<extends>>
+CF <.. FE : <<extends>>
+SF <.. FE : <<extends>>
 User --> UC1
 User --> UC2
 User --> UC3
 User --> UC4
 User --> CF
 User --> SF
-UC1 <... NSE : <<extends>>
-UC1 ...> Conf : includes
-    Conf ...> UC5 : <<includes>>
-    Conf <... MFE : <<extends>>
-    Conf <... NFE : <<extends>>
-UC1 <.. Ind : <<extends>>
+User --> Ind
+
+
+UC1 ..> Conf : <<includes>>
 UC2 ..> Conf : <<includes>>
-UC2 <.. Ind : <<extends>>
+UC3 ..> Conf : <<includes>>
+UC1 <.. FEM : <<extends>>
+UC4.1 <.. SE : <<extends
+UC2 <.. FEM : <<extends>>
+UC3 <.. FEM : <<extends>>
+Conf <.. NSE : <<extends>>
+UC4 ..> UC4.1 : <<includes>>
+Conf ..> UC5 : <<includes>>
 @enduml
