@@ -20,8 +20,8 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Definire i casi d'uso principali (creazione, modifica, cancellazione, ricerca, salvataggio su file). _In corso.._ ✅
    - Creare il diagramma UML dei casi d'uso. ✅
    - Descrivere i casi d'uso. ✅ 
-   - Revisione requisiti e use cases attraverso checklist. _In corso.._ ⏳ 
-   - Accettazione e unione dei documenti.
+   - Revisione requisiti e use cases attraverso checklist. ✅ 
+   - Accettazione e unione dei documenti. ✅
    - Rilascio del documento SRS su GitHub.
 
 3. **Progettazione** *(Entro il 21/02/2025)*

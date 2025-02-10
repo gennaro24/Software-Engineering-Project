@@ -16,13 +16,18 @@
 \contentsline {subsection}{\numberline {2.2}Individual Functionalities (FR-IFxx)}{5}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Aggiunta Contatto (FR-IFAx)}{5}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Rimozione Contatto (FR-IFRx)}{6}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Modifica Contatto (FR-IFMx)}{7}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Ricerca e visualizzazione Contatti (FR-IFSx)}{8}{subsubsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.3}Data Format and Information (FR-DFIxx)}{9}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}User Interface (FR-UIxx)}{9}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Dashboard (FR-UIDx)}{9}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Error Messages (FR-UIEx)}{12}{subsubsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}Usability (FR-UIUx)}{13}{subsubsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.5}Interface to the System (NFR-ISxx)}{14}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Other Constraints NFR-OCxx}{14}{subsubsection.2.5.1}%
-\contentsline {section}{\numberline {3}Use Cases (UC-xx)}{15}{section.3}%
+\contentsline {subsubsection}{\numberline {2.2.3}Modifica Contatto (FR-IFMx)}{6}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Ricerca e visualizzazione Contatti (FR-IFSx)}{7}{subsubsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.3}Data Format and Information (FR-DFIxx)}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}User Interface (FR-UIxx)}{8}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Dashboard (FR-UIDx)}{8}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Error Messages (FR-UIEx)}{11}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Usability (FR-UIUx)}{12}{subsubsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.5}Interface to the System (NFR-ISxx)}{13}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Other Constraints NFR-OCxx}{13}{subsubsection.2.5.1}%
+\contentsline {section}{\numberline {3}Use Cases (UC-xx)}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Caso d'Uso: [UC-01]}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Caso d'Uso: [UC-02]}{15}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Caso d'Uso: [UC-03]}{16}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Caso d'Uso: [UC-04]}{17}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Use Cases Diagram}{18}{subsection.3.5}%

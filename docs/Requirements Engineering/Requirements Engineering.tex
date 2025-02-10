@@ -1,17 +1,17 @@
 \documentclass[a4paper,12pt]{article}
 
-% Pacchetti utili
+
 \usepackage{enumitem}
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{float}
-\usepackage[utf8]{inputenc}  % Supporto per caratteri UTF-8
-\usepackage{graphicx}        % Inserimento immagini
-\usepackage{geometry}        % Impostazioni margini
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
 \usepackage{tabularx}
-\usepackage{titling}         % Personalizzazione del titolo
-\usepackage{fancyhdr}        % Intestazione e piè di pagina
-\usepackage[hidelinks]{hyperref}        % Collegamenti nell'indice
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
 \usepackage{lipsum}
 \raggedbottom
 \newcommand{\req}[4]{
@@ -23,12 +23,12 @@
 
 \geometry{left=3cm, right=3cm, top=3cm, bottom=3cm}
 
-% Personalizzazione intestazione
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
 
-% Logo Università (sostituisci "logo_unisa.png" con il percorso corretto)
+
 \title{
     \includegraphics[width=4cm]{../../resources/logo.png} \\[1cm]  % Logo Università
     \textbf{\Large Università degli Studi di Salerno} \\[0.5cm]
@@ -43,15 +43,15 @@
 \begin{document}
 
     \maketitle
-    \thispagestyle{empty}  % Rimuove il numero di pagina sulla copertina
+    \thispagestyle{empty}
 
-% Inserire l'indice
+
     \tableofcontents
     \newpage
 
-% Inizio del documento
+
     \section{Glossario dei Termini}
-% Testo introduttivo sul glossario e sulla descrizione
+
     In questa sezione vengono forniti i termini utilizzati nel documento e una descrizione generale della categorizzazione dei requisiti. Inoltre, si descrive il simbolismo associato ad ogni categoria di requisiti, che sarà utilizzato successivamente.
 
     \subsection{Categorizzazione dei Requisiti}
@@ -64,7 +64,7 @@
     \paragraph{Data Format and Information (DFI)}
     In questo sottogruppo di requisiti viene descritto il formato dei dati gestiti dall'applicazione e il loro mantenimento durante l'utilizzo. Ogni requisito appartenente a questa categoria verrà indicato con il codice: FR-DFI seguito da un numero.
     \paragraph{User Interface (UI)}
-% Testo descrittivo su User Interface
+
     I requisiti con questo prefisso descrivono l'interfaccia utente e la sua usabilità, in termini di:
     \begin{itemize}
         \item \textbf{Dashboard} : Quali informazioni devono essere visualizzate all'interno dell'interfaccia utente.
@@ -169,7 +169,7 @@
             FR-IFM1 & Durante la modifica di un contatto, l'utente può modificare il nome ed il cognome.  & MH & Basso
             \\
             \hline
-            FR-IFM2 & Durante la modifica di un contatto , l'utente può eliminare il nome o il cognome , ma non entrambi i campi. & MH & Basso
+            FR-IFM2 & Durante la modifica di un contatto , l'utente può eliminare il nome ed il cognome , ma prima della conferma almeno uno dei campi non deve essere vuoto. & MH & Basso
             \\
             \hline
             FR-IFM3 & Durante la modifica di un contatto, l'utente può modificare, eliminare uno o tutti gli indirizzi e-mail presenti all'interno del contatto.  & MH & Basso
@@ -178,13 +178,10 @@
             FR-IFM4 & Durante la modifica di un contatto, l'utente può modificare, eliminare uno o tutti i numeri di telefono presenti all'interno del contatto. & MH & Basso
             \\
             \hline
-            FR-IFM5 & Terminata la modifica di un contatto, la lista sarà aggiornata e salvata con le nuove informazioni & MH & Basso
+            FR-IFM5 & Terminata la modifica di un contatto , l'utente può confermare la scelta, con conseguente salvataggio e aggiornamento della lista dei contatti. & SH & Medio
             \\
             \hline
-            FR-IFM6 & Terminata la modifica di un contatto , l'utente potrà confermare la scelta, con conseguente salvataggio e aggiornamento della lista dei contatti. & SH & Medio
-            \\
-            \hline
-            FR-IFM7 & Durante la modifica di un contatto , l'utente può uscire dall'operazione, con conseguente salvataggio e aggiornamento della lista dei contatti. & NH & Medio
+            FR-IFM6 & Durante la modifica di un contatto , l'utente può uscire dall'operazione, con conseguente salvataggio e aggiornamento della lista dei contatti. & NH & Medio
             \\
             \hline
         \end{tabular}
@@ -283,7 +280,7 @@
         l'aggiunta attraverso un campo di conferma. & SH & Medio \\
         \hline
         FR-UID11 & All'interno del menù contestuale, l'utente potrà tornare alla dashboard
-        senza effettuare l'aggiunta attraverso un campo \texttt{Annulla}. & NH & Medio \\
+        senza effettuare l'aggiunta attraverso un campo \texttt{Indietro}. & NH & Medio \\
         \hline
         FR-UID12 & All'interno della Dashboard, il bottone di modifica sarà disattivato
         se non sono presenti contatti all'interno della lista. & MH & Basso \\
@@ -293,17 +290,18 @@
         modificare i campi esistenti, eliminarli o aggiungerli ove possibile. & MH & Basso \\
         \hline
         FR-UID14 & All'interno della Dashboard l'utente potrà eliminare un contatto
-        attraverso l'apposito bottone di eliminazione, cliccando sul contatto. & MH & Basso \\
+        attraverso l'apposito bottone di eliminazione. & MH & Basso \\
         \hline
-        FR-UID15 & Il bottone di eliminazione è utilizzabile solo se la lista di contatti non è vuota. & MH & Basso \\ \hline
-        FR-UID16  & Il bottone di modifica è utilizzabile solo se la lista di contatti non è vuota. & MH & Basso \\ \hline
-        FR-UID17 & al click del bottone di eliminazione, si aprirà un menù contestuale per confermare o tornare indietro. & SH & Basso \\ \hline
-        FR-UID18 & All'interno della Dashboard è presente una barra di ricerca, in cui l'utente può cercare i contatti per nome e/o cognome. L'utente può confermare la ricerca attraverso l'apposito bottone "Cerca" & MH & Basso \\ \hline
-        FR-UID19 & Quando la ricerca verrà effettuata, l'utente visualizzerà la lista dei contatti coerente con la ricerca in ordine alfabetico. Se non è presente alcun contatto che corrisponde alla ricerca, l'utente visualizzerà la lista dei contatti vuota. & MH & Basso \\ \hline
-        FR-UID20 & Quando la ricerca viene confermata, dopo la visualizzazione dei risultati , l'utente può ritornare alla Dashboard attraverso il bottone "Indietro" & SH & Basso \\ \hline
-        FR-UID21 & L'utente può ritornare alla Dashboard in ogni momento premendo ESC & NH & Basso \\ \hline
-        FR-UID22 & L'utente può caricare, salvare file di contatti attraverso due bottoni all'interno della Dashboard. & MH & Basso \\ \hline
-        FR-UID23 & L'utente può visualizzare le informazioni di un contatto cliccando su di esso & SH & Basso \\ \hline
+        FR-UID15 & Il bottone di eliminazione è utilizzabile solo se la lista di contatti non è vuota. Altrimenti, sarà disattivato. & MH & Basso \\ \hline
+        FR-UID16 & al click del bottone di eliminazione, si aprirà un menù contestuale per confermare o tornare indietro. & SH & Basso \\ \hline
+        FR-UID17 & All'interno della Dashboard è presente una barra di ricerca, in cui l'utente può cercare i contatti per nome e/o cognome. L'utente può confermare la ricerca attraverso l'apposito bottone "Cerca" & MH & Basso \\ \hline
+        FR-UID18 & Quando la ricerca verrà effettuata, l'utente visualizzerà la lista dei contatti coerente con la ricerca in ordine alfabetico. Se non è presente alcun contatto che corrisponde alla ricerca, l'utente visualizzerà la lista dei contatti vuota. & MH & Basso \\ \hline
+        FR-UID19 & Quando la ricerca viene confermata, dopo la visualizzazione dei risultati , l'utente può ritornare alla Dashboard attraverso il bottone "Indietro" & SH & Basso \\ \hline
+        FR-UID20 & L'utente può ritornare alla Dashboard in ogni momento premendo ESC & NH & Basso \\ \hline
+        FR-UID21 & L'utente può caricare, salvare file di contatti attraverso due bottoni all'interno della Dashboard. & MH & Basso \\ \hline
+        FR-UID22 & L'utente può visualizzare le informazioni di un contatto cliccando su di esso & SH & Basso \\ \hline
+        FR-UID13 & L'utente può caricare manualmente un file contenente una lista di contatti attraverso l'apposito bottone. & MH & Basso \\ \hline
+        FR-UID24 & L'utente può salvare manualmente la lista dei contatti attraverso l'apposito bottone di salvataggio. & MH & Basso \\ \hline
     \end{longtable}
     \subsubsection{Error Messages (FR-UIEx)}
     \begin{table}[H]
@@ -318,38 +316,26 @@
             ,il bottone di conferma verrà disabilitato e  verrà visualizzato il messaggio di errore:
             \textit{“Uno dei campi nome e cognome non può essere vuoto.”} & MH & Basso \\
             \hline
-
-            FR-UIE2 &
-            Se l'utente prova ad inserire più di 3 indirizzi e-mail per lo stesso contatto,
-            verrà visualizzato un messaggio di errore:
-            \textit{“Non puoi inserire più di 3 indirizzi e-mail per contatto.”} & MH & Basso \\
-            \hline
-
-            FR-UIE3 &
-            Se l'utente prova ad inserire più di 3 numeri di telefono per lo stesso contatto,
-            verrà visualizzato un messaggio di errore:
-            \textit{“Non puoi inserire più di 3 numeri di telefono per contatto.”} & MH & Basso \\
-            \hline
-
+            FR-UIE2 & Se durante un salvataggio manuale della lista si verifica un errore, verrà visualizzato il messaggio di errore generico: \textit {"Errore durante il salvataggio . Riprovare."} & SH & Basso \\ \hline
+            FR-UIE3 & Se durante il caricamento manuale o automatico della lista si verifica un errore, verrà visualizzato il messaggio di errore generico:\textit{ "Errore durante il caricamento. Assicurarsi che il file caricato sia del formato adatto e riprovare." }& SH & Basso \\ \hline
             FR-UIE4 &
-            Se l'utente inserisce un indirizzo e-mail in un formato non valido
+            All'interno del contesto di modifica e aggiunta di un contatto, se l'utente inserisce un indirizzo e-mail in un formato non valido
             (e.g. privo di chiocciola \texttt{@}),alla conferma verrà visualizzato un messaggio di errore:
-            \textit{“L’indirizzo e-mail inserito non è valido.”} & SH & Basso \\
+            \textit{“L’indirizzo e-mail inserito non è valido.”} e il salvataggio non verrà effettuato & SH & Basso \\
             \hline
 
             FR-UIE5 &
-            Se l'utente inserisce un numero di telefono in un formato ritenuto non valido
+            All'interno del contesto di modifica e aggiunta di un contatto, se l'utente inserisce un numero di telefono in un formato ritenuto non valido
             (es. lettere al posto di cifre), alla conferma verrà visualizzato un messaggio di errore:
             \textit{“Il numero di telefono inserito non è valido.”} & SH & Basso \\
             \hline
-
             FR-UIE6 &
             Se l'utente tenta di rimuovere o modificare un contatto che non esiste più in lista
             (ad es. è stato rimosso durante l’operazione da un altro processo o è corrotto),
             verrà visualizzato un messaggio di errore:
-            \textit{“Il contatto selezionato non esiste o è già stato eliminato.”} & SH & Basso \\
+            \textit{“Il contatto selezionato non esiste o è già stato eliminato.”} & NH & Alto \\
             \hline
-            FR-UIE7 & Se l'utente effettua una ricerca senza risultati, visualizzerà un messaggio il messaggio di errore "Nessun risultato corrispondente ai criteri di ricerca" & SH & Basso. \\ \hline
+            FR-UIE7 & Se l'utente effettua una ricerca senza risultati, visualizzerà il messaggio di errore "Nessun risultato corrispondente ai criteri di ricerca" & SH & Basso. \\ \hline
         \end{tabular}
         \caption{Tabella dei requisiti per la gestione dei messaggi di errore (E).}
     \end{table}
@@ -435,7 +421,7 @@
         \caption{Tabella di requisiti non funzionali generici (OC).}
     \end{table}
     \section{Use Cases (UC-xx)}
-    \subsection*{Caso d'Uso: [UC-01]}
+    \subsection{Caso d'Uso: [UC-01]}
 
     \begin{table}[htbp]
         \centering
@@ -467,7 +453,7 @@
         \caption{Aggiunta Contatto}
     \end{table}
     \newpage
-    \subsection*{Caso d'Uso: [UC-02]}
+    \subsection{Caso d'Uso: [UC-02]}
 
     \begin{table}[htbp]
         \centering
@@ -499,7 +485,7 @@
         \caption{Modifica Contatto}
     \end{table}
     \newpage
-    \subsection*{Caso d'Uso: [UC-03]}
+    \subsection{Caso d'Uso: [UC-03]}
 
     \begin{table}[htbp]
         \centering
@@ -531,7 +517,7 @@
         \caption{Rimozione Contatto}
     \end{table}
     \newpage
-    \subsection*{Caso d'Uso: [UC-04]}
+    \subsection{Caso d'Uso: [UC-04]}
 
     \begin{table}[htbp]
         \centering
@@ -561,6 +547,16 @@
         \end{tabularx}
         \caption{Ricerca Contatto}
     \end{table}
+    \newpage
+    \subsection {Use Cases Diagram}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{Use Cases.png}
+        \label{fig:usecases-diagram}
+    \end{figure}
+
+
 \end{document}
 
 

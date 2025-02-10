@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.7)  8 FEB 2025 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.7)  10 FEB 2025 16:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -412,7 +412,7 @@ ring.out)
 \@outlinefile=\write3
 \openout3 = `"Requirements Engineering.out"'.
 
-<../../resources/logo.png, id=91, 351.3125pt x 351.3125pt>
+<../../resources/logo.png, id=111, 351.3125pt x 351.3125pt>
 File: ../../resources/logo.png Graphic file (type png)
 <use ../../resources/logo.png>
 Package pdftex.def Info: ../../resources/logo.png  used on input line 46.
@@ -454,174 +454,185 @@ sere vi-su-al-iz-zate all'interno dell'interfaccia
 [4]
 
 [5]
-Underfull \hbox (badness 1577) in paragraph at lines 184--184
+Underfull \hbox (badness 1577) in paragraph at lines 181--181
 []|\OT1/cmr/m/n/12 Terminata la mod-i-fica di un con-tatto ,
  []
 
 
 
 [6]
-
-[7]
-Underfull \hbox (badness 1803) in paragraph at lines 224--224
+Underfull \hbox (badness 1803) in paragraph at lines 221--221
 []|\OT1/cmr/m/n/12 L'applicativo deve sal-vare i con-tatti at-
  []
 
 
 
-[8]
-Underfull \hbox (badness 2495) in paragraph at lines 291--293
+[7]
+Underfull \hbox (badness 2495) in paragraph at lines 288--290
 []|\OT1/cmr/m/n/12 Quando l'utente se-lezioner^^Ra l'opzione di
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 300--300
+Underfull \hbox (badness 2020) in paragraph at lines 296--296
 []|\OT1/cmr/m/n/12 al click del bot-tone di elim-i-nazione, si
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 301--301
+Underfull \hbox (badness 1859) in paragraph at lines 297--297
 \OT1/cmr/m/n/12 care i con-tatti per nome e/o cog-nome.
  []
 
-[9] [10]
+[8] [9]
+Underfull \hbox (badness 1205) in paragraph at lines 338--338
+\OT1/cmr/m/n/12 sun risul-tato cor-rispon-dente ai cri-teri di
+ []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 393--395
+
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 379--381
 []|\OT1/cmr/m/n/12 Il sis-tema deve im-pedire l'avvio di
  []
 
 
 
-[12]
+[11]
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-409.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 409.
+395.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 395.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 409.
+(Font)              for symbol `textbraceleft' on input line 395.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--409
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \OT1/cmr/m/n/12 pat-tern: \OMS/cmtt/m/n/12 f \OT1/cmtt/m/n/12 "contacts": [ \OM
 S/cmtt/m/n/12 f \OT1/cmtt/m/n/12 "name":
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--409
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \OT1/cmtt/m/n/12 "...", "surname": "...", "emails":
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 413--413
+Underfull \hbox (badness 3375) in paragraph at lines 399--399
 []|\OT1/cmr/m/n/12 Il campo e-mail ^^Re iden-ti-fi-cato da una
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 413--413
+Underfull \hbox (badness 1152) in paragraph at lines 399--399
 \OT1/cmr/m/n/12 stringa che pre-senta il seguente pat-tern:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--417
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 []|\OT1/cmr/m/n/12 La strut-tura dati da uti-liz-zare ^^Re
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--417
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 \OT1/cmr/m/n/12 L'ObservableList, cos^^R^^P che i cam-bi-a-
  []
 
 
 
-[13]
-Underfull \hbox (badness 7722) in paragraph at lines 466--466
+[12]
+Underfull \hbox (badness 7722) in paragraph at lines 452--452
 \OT1/cmr/m/n/12 cari-ca-mento e vi-su-al-izza la
  []
 
 
-Underfull \hbox (badness 3291) in paragraph at lines 466--466
+Underfull \hbox (badness 3291) in paragraph at lines 452--452
 \OT1/cmr/m/n/12 4. L'applicativo mostra il
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--466
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
 
  []
 
 
-Overfull \hbox (12.79999pt too wide) in alignment at lines 466--466
+Overfull \hbox (12.79999pt too wide) in alignment at lines 452--452
 [][] 
  []
 
 
 
-[14]
+[13]
 
-[15]
-Underfull \hbox (badness 7722) in paragraph at lines 498--498
+[14]
+Underfull \hbox (badness 7722) in paragraph at lines 484--484
 \OT1/cmr/m/n/12 cari-ca-mento e vi-su-al-izza la
  []
 
 
-Underfull \hbox (badness 3291) in paragraph at lines 498--498
+Underfull \hbox (badness 3291) in paragraph at lines 484--484
 \OT1/cmr/m/n/12 5. L'applicativo mostra il
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 498--498
+Underfull \hbox (badness 10000) in paragraph at lines 484--484
 
  []
 
 
-Overfull \hbox (12.79999pt too wide) in alignment at lines 498--498
+Overfull \hbox (12.79999pt too wide) in alignment at lines 484--484
+[][] 
+ []
+
+
+
+[15]
+Underfull \hbox (badness 7722) in paragraph at lines 516--516
+\OT1/cmr/m/n/12 cari-ca-mento e vi-su-al-izza la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 516--516
+
+ []
+
+
+Overfull \hbox (12.79999pt too wide) in alignment at lines 516--516
 [][] 
  []
 
 
 
 [16]
-Underfull \hbox (badness 7722) in paragraph at lines 530--530
+Underfull \hbox (badness 7722) in paragraph at lines 547--547
 \OT1/cmr/m/n/12 cari-ca-mento e vi-su-al-izza la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--530
+Underfull \hbox (badness 10000) in paragraph at lines 547--547
+\OT1/cmr/m/n/12 con-tatti cor-rispon-dente alla
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 547--547
 
  []
 
 
-Overfull \hbox (12.79999pt too wide) in alignment at lines 530--530
+Overfull \hbox (12.79999pt too wide) in alignment at lines 547--547
 [][] 
  []
 
 
 
 [17]
-Underfull \hbox (badness 7722) in paragraph at lines 561--561
-\OT1/cmr/m/n/12 cari-ca-mento e vi-su-al-izza la
- []
+<Use Cases.png, id=257, 581.17125pt x 398.48875pt>
+File: Use Cases.png Graphic file (type png)
+<use Use Cases.png>
+Package pdftex.def Info: Use Cases.png  used on input line 555.
+(pdftex.def)             Requested size: 426.79135pt x 292.63945pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 561--561
-\OT1/cmr/m/n/12 con-tatti cor-rispon-dente alla
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 561--561
-
- []
-
-
-Overfull \hbox (12.79999pt too wide) in alignment at lines 561--561
-[][] 
- []
-
-
-
-[18]
+[18 <./Use Cases.png (PNG copy)>]
 (C:/Users\fosch\Desktop\Software-Engineering-Project\auxil\Requirements Enginee
 ring.aux)
  ***********
@@ -634,13 +645,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `"Requirements Engineering".out' has not chan
 ged.
-(rerunfilecheck)             Checksum: FC6085BCE1CAC5A945826058E9FA3C71;4461.
+(rerunfilecheck)             Checksum: E64A4D16518E462AA35C6E066B19E331;5246.
  ) 
 Here is how much of TeX's memory you used:
- 10568 strings out of 473530
- 172396 string characters out of 5714795
- 690437 words of memory out of 5000000
- 33587 multiletter control sequences out of 15000+600000
+ 10585 strings out of 473530
+ 172731 string characters out of 5714795
+ 692493 words of memory out of 5000000
+ 33603 multiletter control sequences out of 15000+600000
  566169 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,13n,93p,718b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -656,9 +667,9 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/User
 s/fosch/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 >
 Output written on "C:/Users\fosch\Desktop\Software-Engineering-Project\out\Requ
-irements Engineering.pdf" (18 pages, 276128 bytes).
+irements Engineering.pdf" (18 pages, 328758 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 182 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 320 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
+ 227 words of extra memory for PDF output out of 10000 (max. 10000000)
 
