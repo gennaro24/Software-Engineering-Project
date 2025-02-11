@@ -24,14 +24,14 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Accettazione e unione dei documenti. ✅
    - Rilascio del documento SRS su GitHub. ✅
 
-3. **Progettazione** *(Entro il 21/02/2025)*
-   - Progettazione del sistema (mock-up)
-   - Disegnare il **diagramma delle classi** UML.
+3. **Progettazione** *(Entro il 21/02/2025)* _In corso..._
+   - Progettazione del sistema (mock-up) _In corso.._
+   - Disegnare il **diagramma delle classi** UML. _In corso.._
    - Creare i **diagrammi di sequenza** per le interazioni più importanti.
    - Aggiungere commenti sulle scelte progettuali.
    - Caricare il documento su GitHub.
    - Eventuale aggiornamento dei requisiti.
-   - Scrivere lo scheletro delle classi
+   - Scrivere lo scheletro delle classi _In corso.._
    - Documentazione delle classi.
 
 5. **Implementazione & Testing** *(Entro il 27/02/2025)*
