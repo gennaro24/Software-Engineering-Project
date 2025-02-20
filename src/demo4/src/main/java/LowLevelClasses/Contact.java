@@ -1,13 +1,14 @@
 package LowLevelClasses;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
-public class Contact {
+public class Contact implements Serializable , Comparable<Contact> {
     private String name;
     private String surname;
-    private List<String> emails;
-    private List<String> numbers;
+    private ArrayList<String> emails;
+    private ArrayList<String> numbers;
+    public Contact(){}
     public Contact (String name , String surname , ArrayList<String> email , ArrayList<String> number ){
         this.name = name;
         this.surname = surname;
@@ -18,32 +19,34 @@ public class Contact {
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSurname() {
         return surname;
     }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public List<String> getEmails() {
+    public ArrayList<String> getEmails() {
         return emails;
     }
-
-    public void setEmails(List<String> emails) {
-        this.emails = emails;
-    }
-
-    public List<String> getNumbers() {
+    public ArrayList<String> getNumbers() {
         return numbers;
     }
 
-    public void setNumbers(List<String> numbers) {
-        this.numbers = numbers;
+
+    @Override
+    public int compareTo(Contact o) {
+        int result = this.name.compareToIgnoreCase(o.getName());
+        if (result == 0) {
+            result = this.surname.compareToIgnoreCase(o.getSurname());
+        }
+        return result;
+    }
+    @Override
+    public String toString(){
+        StringBuffer s = new StringBuffer("emails:");
+        StringBuffer n = new StringBuffer("numeri: ");
+        for (String p : numbers)
+            n.append(p + "\n");
+        for (String e : emails)
+            s.append(e + "\n");
+        return name + " " + surname + "\n" + s + "\n" + n + "\n";
     }
 }
+

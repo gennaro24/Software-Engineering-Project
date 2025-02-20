@@ -4,9 +4,11 @@ module foschillogennaro.demo4 {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires com.google.gson;
 
-    opens LowLevelClasses to javafx.fxml;
+    opens LowLevelClasses to javafx.fxml , com.google.gson;
     exports LowLevelClasses;
     exports HighLevelClasses;
     opens HighLevelClasses to javafx.fxml;
+
 }
