@@ -24,25 +24,26 @@ Il progetto è suddiviso nelle seguenti fasi:
    - Accettazione e unione dei documenti. ✅
    - Rilascio del documento SRS su GitHub. ✅
 
-3. **Progettazione** *(Entro il 21/02/2025)* _In corso..._
-   - Progettazione del sistema (mock-up) _In corso.._
-   - Disegnare il **diagramma delle classi** UML. _In corso.._
-   - Creare i **diagrammi di sequenza** per le interazioni più importanti.
-   - Aggiungere commenti sulle scelte progettuali.
-   - Caricare il documento su GitHub.
-   - Eventuale aggiornamento dei requisiti.
-   - Scrivere lo scheletro delle classi _In corso.._
-   - Documentazione delle classi.
+3. **Progettazione** *(Entro il 21/02/2025)* ✅
+   - Progettazione del sistema (mock-up) ✅
+   - Disegnare il **diagramma delle classi** UML. ✅
+   - Creare i **diagrammi di sequenza** per le interazioni più importanti. ✅
+   - Aggiungere commenti sulle scelte progettuali. ✅
+   - Caricare il documento su GitHub. ✅
+   - Eventuale aggiornamento dei requisiti. ✅
+   - Scrivere lo scheletro delle classi ✅
+   - Documentazione delle classi. ✅
 
-5. **Implementazione & Testing** *(Entro il 27/02/2025)*
-   - Implementazione delle classi.
-   - Implementare i test automatici con **JUnit**.
-   - Testare e correggere eventuali bug.
-   - Aggiornare costantemente GitHub.
+5. **Implementazione & Testing** *(Entro il 27/02/2025)* _In corso.._
+   - Implementazione delle classi. ✅
+   - Implementare i test automatici con **JUnit**. _In corso.._
+   - Testare e correggere eventuali bug. _In corso.._
+   - Aggiornare costantemente GitHub. _In corso.._
 
 ## 🛠️ Strumenti Utilizzati
 - **Java** per lo sviluppo.
 - **JavaFX** per lo sviluppo di interfacce grafiche.
+- **Scene Builder** per la realizzazione del file FXML 
 - **JUnit** per il testing.
 - **GitHub** per il version control.
 - **plantUML** per i diagrammi UML.
