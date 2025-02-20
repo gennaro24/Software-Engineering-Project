@@ -1,0 +1,54 @@
+@startuml
+package HighLevelClasses {
+    class ContactApplication {
+        +start(stage: Stage) : void <<throws IOException>>
+        +main(args: String[]) : void
+    }
+
+      class DashboardController {
+            - confirmAddButton: Button
+            - addButton: Button
+            - searchButton: Button
+            - confirmButton: Button
+            - missingFieldMessage: Label
+            - resetSearchButton: Button
+            - searchField: TextField
+            - table: TableView<Contact>
+            - nameCol: TableColumn<Contact, String>
+            - surnameCol: TableColumn<Contact, String>
+            - allContacts: ObservableList<Contact>
+            - filteredContacts: ObservableList<Contact>
+            - mainDashboard: AnchorPane
+            - VMDashboard: AnchorPane
+            - name: TextField
+            - surname: TextField
+            - email1: TextField
+            - email2: TextField
+            - email3: TextField
+            - number1: TextField
+            - number2: TextField
+            - number3: TextField
+            - numberArray: TextField[]
+            - emailsArray: TextField[]
+            - nveLabels: Label[]
+            - nvnLabels: Label[]
+            - currentContact: Contact
+
+            +initialize(url: URL, rb: ResourceBundle) : void
+            +initializeTable() : void
+            +loadResource() : void
+            +handleLoadButton() : void
+            +handleSaveButton() : void
+            +deleteClick(c: Contact) : void
+            +modifyClick(c: Contact) : void
+            +addClick() : void
+            +showClick(c: Contact) : void
+            +handleSearchButton() : void
+            +handleResetSearchButton() : void
+            +handleResetVM() : void
+            +handleConfirmEditButton() : void
+            +handleConfirmAddButton() : void
+        }
+}
+
+@enduml

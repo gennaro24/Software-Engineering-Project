@@ -1,0 +1,16 @@
+@startuml
+title Sequence Diagram : Load Contact List
+
+actor User
+participant DashboardController
+participant FileManager
+participant "ContactList" as ContactListObj
+participant TableView
+
+User -> DashboardController: Click "Load" button
+DashboardController -> FileManager: new FileManager()
+DashboardController -> FileManager: loadFile(filepath)
+FileManager --> DashboardController: Return ContactListObj
+DashboardController -> TableView: setItems(allContacts from ContactListObj)
+DashboardController -> User: showAlert("Contatti caricati con successo da: [filepath]")
+@enduml

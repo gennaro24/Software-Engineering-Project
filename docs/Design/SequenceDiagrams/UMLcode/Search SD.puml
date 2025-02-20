@@ -1,0 +1,16 @@
+@startuml
+title Sequence Diagram : Search Contact
+
+actor User
+participant DashboardController
+participant ContactListManager
+participant TableView
+
+User -> DashboardController: Enter search query & click "Search"
+DashboardController -> ContactListManager: searchContact(allContacts, query)
+ContactListManager --> DashboardController: Return filtered list
+DashboardController -> TableView: setItems(filteredContacts)
+DashboardController -> User: (Show Reset Search button)
+@enduml
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+
+package HighLevelClasses {
+    class ContactApplication
+
+    class DashboardController
+}
+
+package LowLevelClasses {
+    class Contact
+    class ContactChecker
+    class ContactList
+    class ContactListManager
+    class FileManager
+}
+
+
+HighLevelClasses.DashboardController --> LowLevelClasses.Contact : uses
+HighLevelClasses.DashboardController --> LowLevelClasses.FileManager : uses
+HighLevelClasses.DashboardController --> LowLevelClasses.ContactListManager : uses
+HighLevelClasses.DashboardController --> LowLevelClasses.ContactChecker : uses
+HighLevelClasses.DashboardController --> LowLevelClasses.ContactList : uses
+
+
+LowLevelClasses.Contact ..|> java.io.Serializable
+LowLevelClasses.Contact ..|> Comparable
+LowLevelClasses.ContactList ..|> java.io.Serializable
+HighLevelClasses.ContactApplication ..|> javafx.application.Application
+
+@enduml

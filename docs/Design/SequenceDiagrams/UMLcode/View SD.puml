@@ -1,0 +1,15 @@
+@startuml
+
+title Sequence Diagram : View Contact
+
+actor User
+participant DashboardController
+participant VMDashboard
+
+User -> DashboardController: Right-click on Contact & select "Visualizza"
+DashboardController -> DashboardController: showClick(contact)
+DashboardController -> DashboardController: loadFields(contact)
+DashboardController -> VMDashboard: Open VMDashboard in view mode (disable editing)
+@enduml
+
+@enduml

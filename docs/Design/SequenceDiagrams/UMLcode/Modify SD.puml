@@ -1,0 +1,21 @@
+@startuml
+actor User
+participant DashboardController
+participant ContactChecker
+participant "allContacts\n(ObservableList)" as Contacts
+participant TableView
+participant ContactListManager
+
+User -> DashboardController: Right-click on Contact & select "Modifica"
+DashboardController -> DashboardController: modifyClick(contact)\n(Set currentContact, open VMDashboard, loadFields)
+User -> DashboardController: Edit contact details & click "Confirm Edit"
+DashboardController -> ContactChecker: isValidEmail(email fields)
+DashboardController -> ContactChecker: isValidNumber(number fields)
+DashboardController -> DashboardController: Create modified Contact instance
+DashboardController -> ContactListManager: updateContact(Contacts, currentContact, modifiedContact)
+ContactListManager --> DashboardController: (contact updated)
+DashboardController -> TableView: refresh()
+DashboardController -> DashboardController: refreshFilteredTable()
+DashboardController -> User: showAlert("Modifica avvenuta con successo!")
+DashboardController -> DashboardController: clear & close VMDashboard
+@enduml

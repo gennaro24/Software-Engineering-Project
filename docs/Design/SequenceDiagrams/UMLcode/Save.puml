@@ -1,0 +1,15 @@
+@startuml
+title Sequence Diagram : Save Contact List
+
+actor User
+participant DashboardController
+participant FileManager
+participant "ContactList" as ContactListObj
+
+User -> DashboardController: Click "Save" button
+DashboardController -> FileManager: new FileManager()
+DashboardController -> ContactListObj: new ContactList(allContacts)
+DashboardController -> FileManager: saveFile(ContactListObj)
+FileManager --> DashboardController: (Contacts saved)
+DashboardController -> User: showAlert("Contatti salvati con successo!")
+@enduml

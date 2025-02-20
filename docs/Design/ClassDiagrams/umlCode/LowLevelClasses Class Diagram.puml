@@ -1,0 +1,51 @@
+@startuml
+!pragma layout_topdown true
+
+package LowLevelClasses {
+    class Contact {
+        - name: String
+        - surname: String
+        - emails: ArrayList<String>
+        - numbers: ArrayList<String>
+        +Contact()
+        +Contact(name: String, surname: String, emails: ArrayList<String>, numbers: ArrayList<String>)
+        +getName() : String
+        +getSurname() : String
+        +getEmails() : ArrayList<String>
+        +getNumbers() : ArrayList<String>
+        +compareTo(o: Contact) : int
+        +toString() : String
+    }
+    class ContactChecker {
+        {static} +isValidEmail(e: String) : boolean
+        {static} +isValidNumber(n: String) : boolean
+        {static} +checkNameSurname(name: String, surname: String) : boolean
+    }
+
+    class ContactList {
+        - contacts: ArrayList<Contact>
+        +ContactList()
+        +ContactList(contacts: ArrayList<Contact>)
+        +getContacts() : ArrayList<Contact>
+    }
+    class ContactListManager {
+        {static} +searchContact(contacts: ArrayList<Contact>, query: String) : ArrayList<Contact>
+        {static} +updateContact(contacts: ObservableList<Contact>, a: Contact, b: Contact) : void
+    }
+    class FileManager {
+        - f: File
+        - gson: Gson
+        {static} FILE_PATH: String = "src/main/resources/contact.json"
+        +FileManager()
+        +loadFile(filepath: String) : ContactList
+        +loadFileFromResource() : ContactList
+        +saveFile(contactList: ContactList) : void
+    }
+
+    ' Associazioni nascoste per forzare l'ordinamento verticale
+    Contact -[hidden]-> ContactChecker
+    ContactChecker -[hidden]-> ContactList
+    Contact -[hidden]-> ContactListManager
+    ContactListManager -[hidden]-> FileManager
+}
+@enduml

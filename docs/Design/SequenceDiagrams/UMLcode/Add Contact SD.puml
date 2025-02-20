@@ -1,0 +1,27 @@
+@startuml
+
+
+actor User
+participant DashboardController
+participant ContactChecker
+participant "allContacts\n(ObservableList)" as Contacts
+participant TableView
+
+User -> DashboardController: Click "Add" button
+DashboardController -> DashboardController: addClick()\n(Open VMDashboard & clear fields)
+User -> DashboardController: Fill in contact details & click "Confirm Add"
+DashboardController -> ContactChecker: isValidEmail(email1)
+DashboardController -> ContactChecker: isValidEmail(email2)
+DashboardController -> ContactChecker: isValidEmail(email3)
+DashboardController -> ContactChecker: isValidNumber(number1)
+DashboardController -> ContactChecker: isValidNumber(number2)
+DashboardController -> ContactChecker: isValidNumber(number3)
+DashboardController -> DashboardController: Create new Contact instance
+DashboardController -> Contacts: add(new Contact)
+DashboardController -> TableView: refresh()
+DashboardController -> DashboardController: refreshFilteredTable()
+DashboardController -> User: showAlert("Contatto aggiunto!")
+DashboardController -> DashboardController: clear & close VMDashboard
+@enduml
+
+@enduml
