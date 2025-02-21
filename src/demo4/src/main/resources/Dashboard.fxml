@@ -13,9 +13,9 @@
    <children>
       <AnchorPane fx:id="mainDashboard" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Button fx:id="addButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#addClick" prefHeight="35.0" prefWidth="98.0" text="Aggiungi" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#addClick" prefHeight="35.0" prefWidth="98.0" text="Aggiungi" />
             <TextField fx:id="searchField" layoutX="230.0" layoutY="15.0" prefHeight="25.0" prefWidth="295.0" />
-            <Button fx:id="searchButton" layoutX="534.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Cerca" />
+            <Button layoutX="534.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Cerca" />
             <TableView fx:id="table" layoutY="51.0" prefHeight="289.0" prefWidth="601.0">
                <columns>
                   <TableColumn fx:id="nameCol" prefWidth="105.33334040641785" text="Nome" />
@@ -27,7 +27,7 @@
             <Button fx:id="resetSearchButton" layoutX="133.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleResetSearchButton" prefHeight="28.0" prefWidth="80.0" text="Indietro" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="VMDashboard" prefHeight="400.0" prefWidth="377.0">
+      <AnchorPane fx:id="ContextDashboard" prefHeight="400.0" prefWidth="377.0">
          <children>
             <TextField fx:id="name" layoutX="42.0" layoutY="84.0" />
             <Label layoutX="42.0" layoutY="54.0" text="Nome" />
@@ -41,7 +41,7 @@
             <TextField fx:id="number1" layoutX="225.0" layoutY="157.0" />
             <TextField fx:id="number2" layoutX="227.0" layoutY="212.0" />
             <TextField fx:id="number3" layoutX="227.0" layoutY="274.0" />
-            <Button fx:id="reset" layoutX="42.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleResetVM" prefHeight="26.0" prefWidth="63.0" text="Esci" />
+            <Button layoutX="42.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleBackToDashboard" prefHeight="26.0" prefWidth="63.0" text="Esci" />
             <Button fx:id="confirmButton" layoutX="302.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleConfirmEditButton" text="Conferma" />
             <Label fx:id="missingFieldMessage" layoutX="99.0" layoutY="109.0" text="Inserisci almeno un nome o cognome!" textFill="RED" />
             <Label fx:id="nve1" layoutX="42.0" layoutY="182.0" text="email non valida. " textFill="RED" />

@@ -19,10 +19,7 @@ public class ContactChecker {
 
     public static boolean isValidNumber(String n){
         String pattern = "^[0-9]{3,15}$"; // pattern che matcha da 3 a 15 cifre.
-
-            if (!n.matches(pattern))
-                return false;
-        return true;
+        return n.matches(pattern);
     }
 
     public static boolean checkNameSurname(String name , String surname){

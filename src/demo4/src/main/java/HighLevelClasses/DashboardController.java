@@ -20,13 +20,9 @@ public class DashboardController implements Initializable {
     @FXML
     private Button confirmAddButton;
     @FXML
-    private Button addButton;
+    private Button confirmButton;
     @FXML
-    private Button searchButton;
-    @FXML
-    private Button confirmButton; //--
-    @FXML
-    private Label missingFieldMessage; //--
+    private Label missingFieldMessage;
     @FXML
     private Button resetSearchButton;
     @FXML
@@ -37,15 +33,15 @@ public class DashboardController implements Initializable {
     private TableColumn<Contact , String> nameCol;
     @FXML
     private TableColumn<Contact , String > surnameCol;
-    @FXML
+
     private ObservableList<Contact> allContacts;
-    @FXML
+
     private ObservableList<Contact> filteredContacts;
 
     @FXML
     private AnchorPane mainDashboard;
     @FXML
-    private AnchorPane VMDashboard; // --
+    private AnchorPane ContextDashboard; // --
 
     @FXML
     private TextField name; //--
@@ -70,6 +66,8 @@ public class DashboardController implements Initializable {
     private TextField[] emailsArray;
     /*************************************************************************
      label per il messaggio : email non valida (nve) / numero non valido (nvn)
+     Vengono incapsulati in due array per facilitarne la visualizzazione / scomparsa
+     attraverso cicli for.
      **************************************************************************/
     @FXML
     private Label nve1;
@@ -83,19 +81,18 @@ public class DashboardController implements Initializable {
     private Label nvn2;
     @FXML
     private Label nvn3;
-    /**ARRAY DI LABEL**/
     private Label[] nveLabels;
     private Label[] nvnLabels;
-    /**utile per tenere traccia del contatto corrente in modifica; viene istanziato alla chiamata di modifyClick**/
-    private Contact currentContact;
+
+    private Contact currentContact; //Utile per tenere traccia del contatto corrente durante la modifica. Viene istanziato nel metodo modifyClick()
     /***************************INIZIALIZZAZIONE SCENA*********************/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         mainDashboard.setVisible(true);
         mainDashboard.setDisable(false);
 
-        VMDashboard.setDisable(true);
-        VMDashboard.setVisible(false);
+        ContextDashboard.setDisable(true);
+        ContextDashboard.setVisible(false);
 
         resetSearchButton.setVisible(false);
 
@@ -103,8 +100,8 @@ public class DashboardController implements Initializable {
         loadResource();
         emailsArray = new TextField[]{email1 , email2 , email3};
         numberArray = new TextField[]{number1 , number2 , number3};
-        nveLabels= new Label[]{nve1 , nve2 , nve3};
-        nvnLabels = new Label[]{nvn1 , nvn2 , nvn3};
+        nveLabels   = new Label[]{nve1 , nve2 , nve3};
+        nvnLabels   = new Label[]{nvn1 , nvn2 , nvn3};
         initBindings();
 
     }
@@ -118,7 +115,7 @@ public class DashboardController implements Initializable {
        selezionato (row.getItem()).
      *******************************/
     @FXML
-    public void initializeTable(){
+    private void initializeTable(){
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         surnameCol.setCellValueFactory(new PropertyValueFactory<>("surname"));
         table.setRowFactory(tv -> {
@@ -146,7 +143,7 @@ public class DashboardController implements Initializable {
     /***************************************************
      * CARICAMENTO RISORSE ATTRAVERSO IL METODO loadFileFromResource()
       ************************************************/
-    public void loadResource(){
+    private void loadResource(){
         FileManager fm = new FileManager();
         ContactList c = fm.loadFileFromResource();
         allContacts = FXCollections.observableArrayList(c.getContacts());
@@ -175,7 +172,7 @@ public class DashboardController implements Initializable {
             showAlert("Nessun file selezionato.", Alert.AlertType.WARNING, "Caricamento");
         }
     }
-
+@FXML
     public void handleSaveButton(){
     FileManager fm = new FileManager();
     ContactList c = new ContactList(new ArrayList<>(allContacts));
@@ -183,8 +180,7 @@ public class DashboardController implements Initializable {
     showAlert("Contatti salvati con successo!" , Alert.AlertType.CONFIRMATION , "salvataggio");
     }
 
-    @FXML
-    public void deleteClick(Contact c) {
+    private void deleteClick(Contact c) {
         // creazione dei bottoni all'interno dell'alert
         ButtonType okButton = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE); //bottone conferma
         ButtonType backButton = new ButtonType("Indietro", ButtonBar.ButtonData.CANCEL_CLOSE); //bottone indietro
@@ -213,7 +209,7 @@ public class DashboardController implements Initializable {
     }
 
 
-    public void modifyClick(Contact c){
+    private void modifyClick(Contact c){
         currentContact = c;
         System.out.println("funziona modifica sul contatto : " + c.getName() + " " + c.getSurname());
         openContextDashboard();
@@ -234,7 +230,7 @@ public class DashboardController implements Initializable {
 
     }
 
-    public void showClick(Contact c){
+    private void showClick(Contact c){
         System.out.println("funziona visualizza sul contatto : " + c.getName() + " " + c.getSurname());
         loadFields(c);
         openContextDashboard();
@@ -267,7 +263,7 @@ public class DashboardController implements Initializable {
     }
 
     @FXML
-    public void handleResetVM(){
+    public void handleBackToDashboard(){
         closeContextDashboard();
         clearContextDashboard();
 
@@ -278,104 +274,44 @@ public class DashboardController implements Initializable {
 
        setConfirmAddButton(false);
        setConfirmButton(true);
-       setErrorLabelsVisible(false);
 
-        int i = 0;
-        /**creazione di liste per salvare le modifiche alle e-mail utili per l'aggiornamento del contatto**/
-        ArrayList<String> emails = new ArrayList<>();
-        ArrayList<String> numbers = new ArrayList<>();
-
-        for (TextField t : emailsArray){
-            if (!t.getText().isEmpty()) {
-                Boolean validMail = ContactChecker.isValidEmail(t.getText());
-                if (!validMail) {
-                    nveLabels[i].setVisible(true);
-                    return;
-                }
-
-            }
-            i++;
-            emails.add(t.getText());
+        if (emailsNumbersValidator()) {
+            Contact modifiedContact = getNewContactFromFields();
+            ContactListManager.updateContact(allContacts, currentContact, modifiedContact);
+            table.refresh();
+            refreshFilteredTable();
+            showAlert("modifica avvenuta con successo!", Alert.AlertType.INFORMATION, "modifica");
+            clearContextDashboard();
+            closeContextDashboard();
         }
-        i = 0;
-        for (TextField n : numberArray) {
-            if (!n.getText().isEmpty()) {
-                Boolean validNumber = ContactChecker.isValidNumber(n.getText());
-                if (!validNumber) {
-                    nvnLabels[i].setVisible(true);
-                    return;
-                }
-            }
-            i++;
-            numbers.add(n.getText());
-        }
-
-        Contact modifiedContact = new Contact(name.getText() , surname.getText() , emails , numbers);
-        ContactListManager.updateContact(allContacts , currentContact , modifiedContact);
-        table.refresh();
-        refreshFilteredTable();
-        showAlert("modifica avvenuta con successo!" , Alert.AlertType.INFORMATION , "modifica");
-        clearContextDashboard();
-        closeContextDashboard();
-
     }
 
     @FXML
     public void handleConfirmAddButton(){
         setConfirmAddButton(true);
         setConfirmButton(false);
-        setErrorLabelsVisible(false);
 
-        int i = 0;
-        /**creazione di liste per salvare le modifiche alle e-mail utili per l'aggiornamento del contatto**/
-        ArrayList<String> emails = new ArrayList<>();
-        ArrayList<String> numbers = new ArrayList<>();
+        if (emailsNumbersValidator()) {
+            Contact addedContact = getNewContactFromFields();
+            allContacts.add(addedContact);
+            table.refresh();
+            refreshFilteredTable();
+            showAlert("è stato aggiunto   \n" + addedContact.getName() + "   " + addedContact.getSurname() + "\n alla lista dei contatti!", Alert.AlertType.INFORMATION, "modifica");
+            clearContextDashboard();
+            closeContextDashboard();
 
-        for (TextField t : emailsArray){
-            if (!t.getText().isEmpty()) {
-                Boolean validMail = ContactChecker.isValidEmail(t.getText());
-                if (!validMail) {
-                    nveLabels[i].setVisible(true);
-                    return;
-                }
-
-            }
-            i++;
-            emails.add(t.getText());
         }
-        i = 0;
-        for (TextField n : numberArray) {
-            if (!n.getText().isEmpty()) {
-                Boolean validNumber = ContactChecker.isValidNumber(n.getText());
-                if (!validNumber) {
-                    nvnLabels[i].setVisible(true);
-                    return;
-                }
-            }
-            i++;
-            numbers.add(n.getText());
-        }
-
-        Contact addedContact = new Contact(name.getText() , surname.getText() , emails , numbers);
-        allContacts.add(addedContact);
-        table.refresh();
-        refreshFilteredTable();
-        showAlert("è stato aggiunto   \n" + addedContact.getName() + "   " + addedContact.getSurname() + "\n alla lista dei contatti!" , Alert.AlertType.INFORMATION , "modifica");
-        clearContextDashboard();
-        closeContextDashboard();
-
-
 
 
     }
 
-    /**UTILITIES METHODS : richiamabili per modifiche visive all'interno della dashboard.**/
+    /*UTILITIES METHODS : richiamabili per modifiche visive all'interno della dashboard.*/
 
 
     /************************************************************************************
     Apertura Dashboard di contesto per la modifica, visualizzazione e aggiunta di contatti.
      **************************************************************************************/
-    public void openContextDashboard(){
+    private void openContextDashboard(){
         for (Label l : nvnLabels) {
             l.setVisible(false);
             l.setManaged(false);
@@ -386,22 +322,22 @@ public class DashboardController implements Initializable {
         }
         mainDashboard.setDisable(true);
         mainDashboard.setVisible(false);
-        VMDashboard.setVisible(true);
-        VMDashboard.setDisable(false);
+        ContextDashboard.setVisible(true);
+        ContextDashboard.setDisable(false);
     }
     /*****************************************************************************************
      Chiusura Dashboard di contesto per la modifica, visualizzazione e aggiunta di contatti.
      *****************************************************************************************/
-    public void closeContextDashboard(){
+    private void closeContextDashboard(){
         mainDashboard.setDisable(false);
         mainDashboard.setVisible(true);
-        VMDashboard.setVisible(false);
-        VMDashboard.setDisable(true);
+        ContextDashboard.setVisible(false);
+        ContextDashboard.setDisable(true);
     }
     /***********************************************************************************************************
       Pulizia dei campi della Dashboard di contesto per la modifica, visualizzazione e aggiunta di contatti.
      ***********************************************************************************************************/
-    public void clearContextDashboard(){
+    private void clearContextDashboard(){
         name.clear();
         surname.clear();
         email1.clear();
@@ -414,7 +350,7 @@ public class DashboardController implements Initializable {
     /***********************************************************************************************************
                 Disabilita la modifica dei campi all'interno della Dashboard di contesto.
      ***********************************************************************************************************/
-    public void disableModifyContextDashboard(){
+    private void disableModifyContextDashboard(){
         name.setEditable(false);
         surname.setEditable(false);
         email3.setEditable(false);
@@ -427,7 +363,7 @@ public class DashboardController implements Initializable {
     /***********************************************************************************************************
      Abilita la modifica dei campi all'interno della Dashboard di contesto.
      ***********************************************************************************************************/
-    public void enableModifyContextDashboard(){
+    private void enableModifyContextDashboard(){
         name.setEditable(true);
         surname.setEditable(true);
         email3.setEditable(true);
@@ -442,7 +378,7 @@ public class DashboardController implements Initializable {
      Carica i campi della Dashboard di Contesto prendendo come parametro il contatto c selezionato dall'utente
      ***********************************************************************************************************/
 
-    public void loadFields (Contact c){
+    private void loadFields (Contact c){
         name.setText(c.getName());
         surname.setText(c.getSurname());
         int i = 0;
@@ -465,7 +401,7 @@ public class DashboardController implements Initializable {
      tipo -> il tipo di alert da mostrare.
      titolo -> il titolo della finestra di alert.
      ***********************************************************************************************************/
-    public void showAlert(String text , Alert.AlertType tipo ,String titolo) {
+    private void showAlert(String text , Alert.AlertType tipo ,String titolo) {
         Alert alert = new Alert(tipo);
         alert.getDialogPane().getStyleClass().add("error-dialog");
         alert.setTitle(titolo);
@@ -477,7 +413,7 @@ public class DashboardController implements Initializable {
      Permette di abilitare (con x = true) o disabilitare (con x = false) il bottone di conferma.
      ***********************************************************************************************************/
 
-    public void setConfirmButton(boolean x){
+    private void setConfirmButton(boolean x){
         confirmButton.setVisible(x);
         confirmButton.setManaged(x);
         confirmButton.setMouseTransparent(!x);
@@ -485,14 +421,14 @@ public class DashboardController implements Initializable {
     /***********************************************************************************************************
      Permette di abilitare (con x = true) o disabilitare (con x = false) il bottone di conferma di aggiunta.
      ***********************************************************************************************************/
-    public void setConfirmAddButton(boolean x){
+    private void setConfirmAddButton(boolean x){
         confirmAddButton.setVisible(x);
         confirmAddButton.setManaged(x);
         confirmAddButton.setMouseTransparent(!x);
 
     }
 
-    public void setErrorLabelsVisible(boolean x){
+    private void setErrorLabelsVisible(boolean x){
         for (Label l : nvnLabels) {
             l.setVisible(x);
             l.setManaged(x);
@@ -503,7 +439,7 @@ public class DashboardController implements Initializable {
         }
     }
 
-    public void initBindings(){
+    private void initBindings(){
         BooleanBinding missingFields = Bindings.createBooleanBinding(() ->
                 ContactChecker.checkNameSurname(name.getText() , surname.getText()) , name.textProperty() , surname.textProperty() );
         confirmButton.disableProperty().bind(missingFields);
@@ -526,4 +462,58 @@ public class DashboardController implements Initializable {
         table.refresh();
     }
 
+    /**
+     *   Metodo di utility utilizzato all'internp di handleConfirmAddButton & handleConfirmEditButton per controllare l'aggiunta di e-mail / numeri non corretti.
+     *   ritorna un boolean che è true se non si sono verificati errori , false se almeno un errore si è verificato. il valore di ritorno viene utilizzato per
+     *   interrompere l'esecuzione del metodo nel caso in cui venga rilevato un errore nei campi.
+     **/
+
+    private boolean emailsNumbersValidator(){
+        int i = 0;                                                                  //conteggio del label da validare (la posizione di un field all'interno degli array corrisponde esattamente alla posizione di un label all'interno dei label array.)
+        int err = 0;                                                                //variabile per il conteggio degli errori (se n > 0 c'è stato almeno un errore e l'azione non deve essere effettuata)
+
+        for (TextField e : emailsArray){                                            //controlla ogni TextField presente nell'array
+            if (!e.getText().trim().isEmpty()){
+                boolean validMail = ContactChecker.isValidEmail(e.getText().trim()); //salva in una variabile booleana il risultato del ContactChecker.
+                if (!validMail) {                                                   // se non è valida, abilita la visualizzazione del label di errore della posizione in cui si trova il text field errato.
+                    nveLabels[i].setVisible(true);
+                    err++;                                                         //la variabile di errore viene aggiornata. Servirà per l'interruzione dell'aggiunta/modifica all'interno dei metodi handler.
+                }else nveLabels[i].setVisible(false);                              //Se invece è valida, disabilita il label di errore.
+            }else nveLabels[i].setVisible(false);
+            i++;
+        }
+        i = 0;
+        for (TextField n : numberArray){                                           //si applica la stessa logica.
+            if (!n.getText().trim().isEmpty()){
+                boolean validNumber = ContactChecker.isValidNumber(n.getText().trim());
+                if (!validNumber){
+                    nvnLabels[i].setVisible(true);
+                    err++;
+                }else nvnLabels[i].setVisible(false);
+            }else nvnLabels[i].setVisible(false);
+            i++;
+        }
+        return (err == 0) ;
+    }
+
+    private Contact getNewContactFromFields() {
+
+        String n = name.getText();
+        String sn = surname.getText();
+        ArrayList<String> emails = new ArrayList<>();
+        ArrayList<String> numbers = new ArrayList<>();
+
+        for (TextField e : emailsArray) {
+            if (!e.getText().trim().isEmpty())
+                emails.add(e.getText().trim());
+
+        }
+        for (TextField nb : numberArray) {
+            if (!nb.getText().trim().isEmpty())
+                numbers.add(nb.getText().trim());
+        }
+
+        return new Contact(n, sn, emails, numbers);
+    }
 }
+

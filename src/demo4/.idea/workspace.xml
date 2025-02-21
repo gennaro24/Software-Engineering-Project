@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c660e42-6086-424c-a0ea-1a63fbe113e2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelClasses/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HighLevelClasses/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/contact.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/contact.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +25,10 @@
         <option value="Interface" />
         <option value="AnnotationType" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="UML Class" />
+        <option value="UML Sequence" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -54,31 +62,45 @@
     "Application.HelloApplication.executor": "Run",
     "Application.HighLevelClasses.ContactApplication.executor": "Run",
     "Application.test.executor": "Run",
-    "DefaultPlantUmlFileTemplate": "UML Class",
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
     "Maven.demo4 [clean].executor": "Run",
     "Maven.demo4 [compile].executor": "Run",
     "Maven.demo4 [validate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/fosch/Desktop/demo4/src/test/java/LowLevelClasses",
     "last_opened_file_path": "C:/Users/fosch/Desktop/Software-Engineering-Project/src/demo4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fosch\Desktop\SequenceDiagrams" />
       <recent name="C:\Users\fosch\Desktop\Software-Engineering-Project\src\demo4\src\main\resources" />
       <recent name="C:\Users\fosch\Desktop\Software-Engineering-Project\src\demo4\src\main\java\HighLevelClasses" />
       <recent name="C:\Users\fosch\Desktop\Software-Engineering-Project\src\demo4\src\main\java\LowLevelClasses" />
       <recent name="C:\Users\fosch\Desktop\Software-Engineering-Project\src\demo4\src\main\resources\images-styles" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="LowLevelClasses" />
     </key>
   </component>
   <component name="RunManager" selected="Application.HighLevelClasses.ContactApplication">
@@ -97,7 +119,7 @@
     </configuration>
     <configuration name="HighLevelClasses.ContactApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HighLevelClasses.ContactApplication" />
-      <module name="Contact List" />
+      <module name="demo4" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="HighLevelClasses.*" />
@@ -156,9 +178,12 @@
       <workItem from="1739813736253" duration="22379000" />
       <workItem from="1739891048649" duration="2812000" />
       <workItem from="1739964745993" duration="24000" />
-      <workItem from="1739978705186" duration="723000" />
-      <workItem from="1739981320060" duration="1414000" />
-      <workItem from="1740046258412" duration="837000" />
+      <workItem from="1739978705186" duration="670000" />
+      <workItem from="1739980308419" duration="4951000" />
+      <workItem from="1740041718890" duration="5003000" />
+      <workItem from="1740070062009" duration="9652000" />
+      <workItem from="1740158815689" duration="36000" />
+      <workItem from="1740159007302" duration="399000" />
     </task>
     <servers />
   </component>
