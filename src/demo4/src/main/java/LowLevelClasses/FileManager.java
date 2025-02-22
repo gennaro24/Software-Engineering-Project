@@ -2,12 +2,13 @@ package LowLevelClasses;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.*;
+/**@Author Foschillo Gennaro**/
 public class FileManager {
 private static final String FILE_PATH = "src/main/resources/contact.json";
 private File f;
 private Gson gson;
 
-/**@Author Foschillo Gennaro**/
+
 public FileManager(){
     gson = new GsonBuilder().setPrettyPrinting().create();
 }

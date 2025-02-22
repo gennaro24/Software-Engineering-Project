@@ -23,6 +23,8 @@ public class ContactChecker {
     }
 
     public static boolean checkNameSurname(String name , String surname){
-        return (name.trim().isEmpty() && surname.trim().isEmpty());
+        String cleanedName = name.replaceAll("[\"']" , "").trim();
+        String cleanedSurname = surname.replaceAll("[\"']" , "").trim();
+        return (cleanedName.isEmpty() && cleanedSurname.isEmpty());
     }
 }

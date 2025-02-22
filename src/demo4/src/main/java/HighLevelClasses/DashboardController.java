@@ -147,7 +147,7 @@ public class DashboardController implements Initializable {
         FileManager fm = new FileManager();
         ContactList c = fm.loadFileFromResource();
         allContacts = FXCollections.observableArrayList(c.getContacts());
-        filteredContacts = FXCollections.observableArrayList(ContactListManager.searchContact(c.getContacts() , null));
+        filteredContacts = allContacts ;  /*FXCollections.observableArrayList(ContactListManager.searchContact(c.getContacts() , null));*/
         table.setItems(allContacts);
         if (allContacts.isEmpty())
                 table.setPlaceholder(new Label("Nessun contatto presente. "));
@@ -379,8 +379,8 @@ public class DashboardController implements Initializable {
      ***********************************************************************************************************/
 
     private void loadFields (Contact c){
-        name.setText(c.getName());
-        surname.setText(c.getSurname());
+        name.setText(c.getName().replaceAll("[\"']" , "").trim());
+        surname.setText(c.getSurname().replaceAll("[\"']" , "").trim());
         int i = 0;
         for (String s : c.getEmails()){
             if (s != null)
@@ -497,9 +497,11 @@ public class DashboardController implements Initializable {
     }
 
     private Contact getNewContactFromFields() {
+        //il controllo dei valori null non viene effettuato perchè se un textfield è vuoto non viene contrassegnato null, ma con una stringa vuota.
+        String n = name.getText().replaceAll("[\"']" , "");
 
-        String n = name.getText();
-        String sn = surname.getText();
+        String sn = surname.getText().replaceAll("[\"']" , "");
+
         ArrayList<String> emails = new ArrayList<>();
         ArrayList<String> numbers = new ArrayList<>();
 

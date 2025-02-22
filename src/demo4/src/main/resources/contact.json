@@ -1,28 +1,10 @@
 {
   "contacts": [
     {
-      "name": "Giorgia",
-      "surname": "De Luca",
-      "emails": [
-        "giorgia.deluca@example.com",
-        "giorgia.deluca@mail.com",
-        ""
-      ],
-      "numbers": [
-        "456123789",
-        "",
-        ""
-      ]
-    },
-    {
-      "name": "Riccardo",
-      "surname": "Lombardi",
-      "emails": [
-        "riccardo.lombardi@example.com"
-      ],
-      "numbers": [
-        "987654321"
-      ]
+      "name": "peppe",
+      "surname": "",
+      "emails": [],
+      "numbers": []
     }
   ]
 }
