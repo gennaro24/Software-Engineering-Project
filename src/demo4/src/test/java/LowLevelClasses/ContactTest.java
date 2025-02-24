@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * @Author Foschillo Gennaro
+ **/
 class ContactTest {
 
     private Contact testedContact;
@@ -52,56 +54,56 @@ class ContactTest {
     void SameName_CompareTo1(){
         compareToIstanceL("B" , "B");
         compareToIstanceR("B" , "C");
-        assertEquals(-1 , LeftContact.compareTo(RightContact) , "B > C ");
+        assertEquals(-1 , LeftContact.compareTo(RightContact) );
     }
     //NOMI UGUALI - COGNOMI DIVERSI (1)
     @Test
     void SameName_CompareTo2(){
         compareToIstanceL("B" , "B");
         compareToIstanceR("B" , "A");
-        assertEquals(1 , LeftContact.compareTo(RightContact) , "A > B ");
+        assertEquals(1 , LeftContact.compareTo(RightContact) );
     }
     //NOMI UGUALI - COGNOMI UGUALI (0)
     @Test
     void SameName_CompareTo3(){
         compareToIstanceL("B" , "B");
         compareToIstanceR("B" , "B");
-        assertEquals(0 , LeftContact.compareTo(RightContact) , "B = B ");
+        assertEquals(0 , LeftContact.compareTo(RightContact) );
     }
     //NOMI UGUALI - COGNOMI VUOTI (0)
     @Test
     void SameName_CompareTo4(){
         compareToIstanceL("B" , "");
         compareToIstanceR("B" , "");
-        assertEquals(0 , LeftContact.compareTo(RightContact) , "A = B ");
+        assertEquals(0 , LeftContact.compareTo(RightContact) );
     }
     //NOMI UGUALI - COGNOME VUOTO (-1)
     @Test
     void SameName_CompareTo5(){
         compareToIstanceL("B" , "B");
         compareToIstanceR("B" , "");
-        assertEquals(-1 , LeftContact.compareTo(RightContact) , "B > vuoto ");
+        assertEquals(-1 , LeftContact.compareTo(RightContact) );
     }
     //NOMI UGUALI - COGNOME VUOTO (1)
     @Test
     void SameName_CompareTo6(){
         compareToIstanceL("B" , "");
         compareToIstanceR("B" , "B");
-        assertEquals(1 , LeftContact.compareTo(RightContact) , "B > vuoto ");
+        assertEquals(1 , LeftContact.compareTo(RightContact) );
     }
     //COGNOMI UGUALI - NOMI DIVERSI (1)
     @Test
     void SameSurname_CompareTo7(){
         compareToIstanceL("B" , "B");
         compareToIstanceR("A" , "B");
-        assertEquals(1 , LeftContact.compareTo(RightContact) , "B < A ");
+        assertEquals(1 , LeftContact.compareTo(RightContact) );
     }
     //COGNOMI UGUALI - NOMI DIVERSI (-1)
     @Test
     void SameSurname_CompareTo8(){
         compareToIstanceL("A" , "B");
         compareToIstanceR("B" , "B");
-        assertEquals(-1 , LeftContact.compareTo(RightContact) , "A > B ");
+        assertEquals(-1 , LeftContact.compareTo(RightContact) );
     }
     //COGNOMI UGUALI - NOMI UGUALI (0)
     @Test
