@@ -2,16 +2,38 @@ package LowLevelClasses;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.*;
-/**@Author Foschillo Gennaro**/
+/**
+ * gestisce il caricamento e il salvataggio di una lista di contatti
+ * in formato JSON.
+ * <p>
+ * Utilizza la libreria {@link com.google.gson.Gson} per la serializzazione e la deserializzazione degli oggetti
+ * {@link ContactList}.
+ * </p>
+ * @Author Foschillo Gennaro
+ **/
 public class FileManager {
 private static final String FILE_PATH = "src/main/resources/contact.json";
 private File f;
-private Gson gson;
-
-
+private final Gson gson;
+/**
+ * costruttore vuoto per inizializzare l'attributo {@link #gson}
+ * */
 public FileManager(){
     gson = new GsonBuilder().setPrettyPrinting().create();
 }
+
+    /**
+     * Carica il file JSON dal percorso specificato e restituisce una {@link ContactList}.
+     * <p>
+     * Se il file non esiste o è vuoto, viene restituita una lista vuota. Durante il caricamento,
+     * il contenuto del file viene letto, stampato a console e, successivamente, la lista viene
+     * salvata nuovamente per aggiornare eventuali modifiche.
+     * </p>
+     *
+     * @param filepath Il percorso del file da caricare.
+     * @return Una {@link ContactList} contenente i contatti caricati, oppure una lista vuota
+     *         se il file non esiste o è vuoto.
+     */
     public ContactList loadFile(String filepath) {
         f = new File(filepath);
         System.out.println("Sto cercando il file: " + f.getAbsolutePath());
@@ -35,19 +57,29 @@ public FileManager(){
             String fileContent = sb.toString();
             System.out.println("Contenuto del file: " + fileContent);
 
-            ContactList contacts = gson.fromJson(fileContent, ContactList.class);
+            ContactList contacts = new ContactList(gson.fromJson(fileContent, ContactList.class).getContacts());
             if (contacts.getContacts() == null) {
                 System.out.println("La deserializzazione ha restituito null per i contatti.");
                 // Forza la creazione di una lista vuota
                 contacts = new ContactList();
             }
+            saveFile(contacts);
             return contacts;
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
         return new ContactList();
     }
-
+    /**
+     * Carica il file JSON presente tra le risorse del progetto e restituisce una {@link ContactList}.
+     * <p>
+     * Se il file {@code contact.json} non viene trovato tra le risorse, viene restituita una lista vuota.
+     * Se il file presenta contatti con campi non conformi ai requisiti, viene restituita una lista con i soli contatti validi.
+     * Dopo il caricamento, la lista viene salvata per aggiornare eventuali modifiche.
+     * </p>
+     *
+     * @return Una {@link ContactList} contenente i contatti caricati, oppure una lista vuota in caso di errore.
+     */
     public ContactList loadFileFromResource(){
         InputStream is = getClass().getResourceAsStream("/contact.json");
         if (is == null) {
@@ -55,10 +87,11 @@ public FileManager(){
             return new ContactList();
         }
         try (Reader reader = new InputStreamReader(is)) {
-            ContactList contacts = gson.fromJson(reader, ContactList.class);
+            ContactList contacts = new ContactList(gson.fromJson(reader, ContactList.class).getContacts()) ;
             if (contacts.getContacts() == null) {
-                contacts = new ContactList();
+                return new ContactList();
             }
+            saveFile(contacts);
             return contacts;
         } catch (IOException ioe) {
             ioe.printStackTrace();
@@ -66,7 +99,14 @@ public FileManager(){
         return new ContactList();
     }
 
-
+    /**
+     * Salva la {@link ContactList} in un file JSON.
+     * <p>
+     * Il file viene salvato nel percorso specificato dalla costante {@code FILE_PATH}.
+     * </p>
+     *
+     * @param contactList La lista di contatti da salvare.
+     */
     public void saveFile(ContactList contactList) {
          f = new File(FILE_PATH);
         try (Writer writer = new FileWriter(f)) {

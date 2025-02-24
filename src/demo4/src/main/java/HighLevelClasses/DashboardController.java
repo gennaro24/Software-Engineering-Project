@@ -15,7 +15,9 @@ import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
+/**
+ * @Author Foschillo Gennaro
+ **/
 public class DashboardController implements Initializable {
     @FXML
     private Button confirmAddButton;
@@ -41,15 +43,12 @@ public class DashboardController implements Initializable {
     @FXML
     private AnchorPane mainDashboard;
     @FXML
-    private AnchorPane ContextDashboard; // --
+    private AnchorPane ContextDashboard;
 
     @FXML
-    private TextField name; //--
+    private TextField name;
     @FXML
-    private TextField surname; //
-    /***********************************************************************
-    * TextField del menù contestuale di aggiunta / modifica / visualizzazione
-    **************************************************************************/
+    private TextField surname;
     @FXML
     private TextField email1;
     @FXML
@@ -64,11 +63,7 @@ public class DashboardController implements Initializable {
     private TextField number3;
     private TextField[] numberArray;
     private TextField[] emailsArray;
-    /*************************************************************************
-     label per il messaggio : email non valida (nve) / numero non valido (nvn)
-     Vengono incapsulati in due array per facilitarne la visualizzazione / scomparsa
-     attraverso cicli for.
-     **************************************************************************/
+
     @FXML
     private Label nve1;
     @FXML
@@ -147,6 +142,7 @@ public class DashboardController implements Initializable {
         FileManager fm = new FileManager();
         ContactList c = fm.loadFileFromResource();
         allContacts = FXCollections.observableArrayList(c.getContacts());
+        allContacts.sort(null);
         filteredContacts = allContacts ;  /*FXCollections.observableArrayList(ContactListManager.searchContact(c.getContacts() , null));*/
         table.setItems(allContacts);
         if (allContacts.isEmpty())
@@ -278,6 +274,7 @@ public class DashboardController implements Initializable {
         if (emailsNumbersValidator()) {
             Contact modifiedContact = getNewContactFromFields();
             ContactListManager.updateContact(allContacts, currentContact, modifiedContact);
+            allContacts.sort(null);
             table.refresh();
             refreshFilteredTable();
             showAlert("modifica avvenuta con successo!", Alert.AlertType.INFORMATION, "modifica");
@@ -294,6 +291,7 @@ public class DashboardController implements Initializable {
         if (emailsNumbersValidator()) {
             Contact addedContact = getNewContactFromFields();
             allContacts.add(addedContact);
+            allContacts.sort(null);
             table.refresh();
             refreshFilteredTable();
             showAlert("è stato aggiunto   \n" + addedContact.getName() + "   " + addedContact.getSurname() + "\n alla lista dei contatti!", Alert.AlertType.INFORMATION, "modifica");
@@ -428,17 +426,6 @@ public class DashboardController implements Initializable {
 
     }
 
-    private void setErrorLabelsVisible(boolean x){
-        for (Label l : nvnLabels) {
-            l.setVisible(x);
-            l.setManaged(x);
-        }
-        for (Label l : nveLabels) {
-            l.setVisible(x);
-            l.setManaged(x);
-        }
-    }
-
     private void initBindings(){
         BooleanBinding missingFields = Bindings.createBooleanBinding(() ->
                 ContactChecker.checkNameSurname(name.getText() , surname.getText()) , name.textProperty() , surname.textProperty() );
@@ -463,9 +450,9 @@ public class DashboardController implements Initializable {
     }
 
     /**
-     *   Metodo di utility utilizzato all'internp di handleConfirmAddButton & handleConfirmEditButton per controllare l'aggiunta di e-mail / numeri non corretti.
+     *   Metodo di utility utilizzato all'interno di handleConfirmAddButton & handleConfirmEditButton per controllare l'aggiunta di e-mail / numeri non corretti.
      *   ritorna un boolean che è true se non si sono verificati errori , false se almeno un errore si è verificato. il valore di ritorno viene utilizzato per
-     *   interrompere l'esecuzione del metodo nel caso in cui venga rilevato un errore nei campi.
+     *   interrompere l'esecuzione dei metodi di conferma nel caso in cui venga rilevato un errore nei campi.
      **/
 
     private boolean emailsNumbersValidator(){

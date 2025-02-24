@@ -1,7 +1,23 @@
 {
   "contacts": [
     {
-      "name": "peppe",
+      "name": "giuseppe",
+      "surname": "alamberti",
+      "emails": [
+        "peppe@doxygen.it"
+      ],
+      "numbers": []
+    },
+    {
+      "name": "luca",
+      "surname": "greco",
+      "emails": [
+        "lgreco@unisa.it"
+      ],
+      "numbers": []
+    },
+    {
+      "name": "ciao",
       "surname": "",
       "emails": [],
       "numbers": []

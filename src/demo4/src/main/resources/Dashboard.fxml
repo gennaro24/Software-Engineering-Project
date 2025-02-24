@@ -18,8 +18,8 @@
             <Button layoutX="534.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Cerca" />
             <TableView fx:id="table" layoutY="51.0" prefHeight="289.0" prefWidth="601.0">
                <columns>
-                  <TableColumn fx:id="nameCol" prefWidth="105.33334040641785" text="Nome" />
-                  <TableColumn fx:id="surnameCol" prefWidth="98.66666412353516" text="Cognome" />
+                  <TableColumn fx:id="surnameCol" prefWidth="105.33334040641785" text="Cognome" />
+                  <TableColumn fx:id="nameCol" prefWidth="98.66666412353516" text="Nome" />
                </columns>
             </TableView>
             <Button layoutX="130.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleSaveButton" text="Salva Rubrica" />

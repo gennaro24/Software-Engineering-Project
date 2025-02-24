@@ -4,16 +4,28 @@ import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * fornisce metodi statici per la gestione
+ * e la manipolazione di liste di contatti.
+ * Include metodi per effettuare ricerche sui contatti e per aggiornare un contatto
+ * presente all'interno di una lista osservabile.
+ * </p>
+ *
+ * @author Foschillo
+ */
 public class ContactListManager {
 
     /**
-       * Il metodo consente di cercare un contatto attraverso una query formata da una stringa o sottostringa
-       * del contatto da cercare. Questo viene effettuato attraverso l'utilizzo della StreamAPI, che partendo da una lista
-       * di contatti già esistente (contacts) , produce uno stream e lo filtra controllando ogni elemento della lista per
-       * nome e cognome. Se in quell'elemento è presente la query, viene inserito in una nuova lista, che viene ritornata
-       * ordinata alfabeticamente.
-     **/
+     * Cerca contatti che contengono la query specificata nel nome o nel cognome.
+     * <p>
+     * Il metodo filtra la lista dei contatti confrontando (in modo case-insensitive) la concatenazione
+     * del nome e del cognome con la query fornita. La lista risultante viene poi ordinata in ordine naturale.
+     * </p>
+     *
+     * @param contacts La lista di contatti in cui effettuare la ricerca.
+     * @param query    La stringa (o sottostringa) da cercare. Se {@code null}, viene restituita la lista originale.
+     * @return Una lista di contatti che corrispondono alla query, ordinata alfabeticamente.
+     */
     public static ArrayList<Contact> searchContact(ArrayList<Contact> contacts ,String query){
         if (query == null)
             return contacts;
@@ -25,7 +37,13 @@ public class ContactListManager {
         search.sort(null);
         return search;
     }
-    //questo metodo sovrascrive il contatto vecchio (a) con il nuovo contatto (b), controllando prima se è presente.
+    /**
+     * Aggiorna un contatto esistente in una lista osservabile.
+     * Se il contatto {@code a} è presente nella lista, viene sostituito dal nuovo contatto {@code b}.
+     * @param contacts La lista osservabile dei contatti.
+     * @param a        Il contatto da sostituire.
+     * @param b        Il nuovo contatto da inserire al posto di {@code a}.
+     */
 
     public static void updateContact (ObservableList<Contact> contacts, Contact a , Contact b){
         int index;
