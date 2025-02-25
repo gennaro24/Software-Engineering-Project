@@ -1,23 +1,15 @@
 {
   "contacts": [
     {
-      "name": "giuseppe",
-      "surname": "alamberti",
+      "name": "Giusseppe",
+      "surname": "Bianchi",
       "emails": [
-        "peppe@doxygen.it"
+        "example@gmail.it"
       ],
       "numbers": []
     },
     {
-      "name": "luca",
-      "surname": "greco",
-      "emails": [
-        "lgreco@unisa.it"
-      ],
-      "numbers": []
-    },
-    {
-      "name": "ciao",
+      "name": "ciaooo",
       "surname": "",
       "emails": [],
       "numbers": []

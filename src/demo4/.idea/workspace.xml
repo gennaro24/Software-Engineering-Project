@@ -9,9 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2c660e42-6086-424c-a0ea-1a63fbe113e2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelClasses/ControllerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelClasses/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HighLevelClasses/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images-styles/icons8-open-book.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelClasses/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelClasses/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/contact.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/contact.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactListTest.testFixList_ManyNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo4" />
       <extension name="coverage">
         <pattern>
@@ -141,9 +140,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="LowLevelClasses" />
-      <option name="MAIN_CLASS_NAME" value="LowLevelClasses.ContactListTest" />
-      <option name="METHOD_NAME" value="testFixList_ManyNumbers" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="LowLevelClasses.FileManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -183,10 +181,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.HighLevelClasses.ContactApplication" />
+        <item itemvalue="JUnit.FileManagerTest" />
         <item itemvalue="JUnit.FileManagerTest.saveVoidFile" />
         <item itemvalue="JUnit.FileManagerTest.loadVoidFile" />
         <item itemvalue="JUnit.ContactListTest" />
-        <item itemvalue="JUnit.ContactListTest.testFixList_ManyNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +223,7 @@
       <workItem from="1740159007302" duration="40511000" />
       <workItem from="1740428721476" duration="4152000" />
       <workItem from="1740433980202" duration="7469000" />
-      <workItem from="1740496172536" duration="595000" />
+      <workItem from="1740496172536" duration="2370000" />
     </task>
     <servers />
   </component>

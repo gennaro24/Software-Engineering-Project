@@ -36,34 +36,17 @@ public FileManager(){
      */
     public ContactList loadFile(String filepath) {
         f = new File(filepath);
-        System.out.println("Sto cercando il file: " + f.getAbsolutePath());
-        System.out.println("Esiste? " + f.exists());
-        System.out.println("Dimensione del file: " + f.length());
-
         if (!f.exists() || f.length() == 0) {
-            System.out.println("File non trovato o vuoto. Restituisco una lista vuota.");
             return new ContactList();
         }
 
         try {
-            // Legge l'intero contenuto in una stringa per controllarlo
-            BufferedReader br = new BufferedReader(new FileReader(f));
-            String line;
-            StringBuilder sb = new StringBuilder();
-            while((line = br.readLine()) != null) {
-                sb.append(line);
-            }
-            br.close();
-            String fileContent = sb.toString();
-            System.out.println("Contenuto del file: " + fileContent);
-
+             String fileContent = printFile();
             ContactList contacts = new ContactList(gson.fromJson(fileContent, ContactList.class).getContacts());
             if (contacts.getContacts() == null) {
-                System.out.println("La deserializzazione ha restituito null per i contatti.");
-                // Forza la creazione di una lista vuota
                 contacts = new ContactList();
             }
-            saveFile(contacts);
+
             return contacts;
         } catch (IOException ioe) {
             ioe.printStackTrace();
@@ -91,7 +74,7 @@ public FileManager(){
             if (contacts.getContacts() == null) {
                 return new ContactList();
             }
-            saveFile(contacts);
+
             return contacts;
         } catch (IOException ioe) {
             ioe.printStackTrace();
@@ -115,6 +98,17 @@ public FileManager(){
             e.printStackTrace();
         }
     }
-
+    private String printFile() throws IOException{
+        BufferedReader br = new BufferedReader(new FileReader(f));
+        String line;
+        StringBuilder sb = new StringBuilder();
+        while((line = br.readLine()) != null) {
+            sb.append(line);
+        }
+        br.close();
+        String fileContent = sb.toString();
+        System.out.println("Contenuto del file: " + fileContent);
+        return fileContent;
+    }
 }
 
