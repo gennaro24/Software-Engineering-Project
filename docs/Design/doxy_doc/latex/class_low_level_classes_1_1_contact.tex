@@ -1,0 +1,108 @@
+\doxysection{Riferimenti per la classe Low\+Level\+Classes.\+Contact}
+\hypertarget{class_low_level_classes_1_1_contact}{}\label{class_low_level_classes_1_1_contact}\index{LowLevelClasses.Contact@{LowLevelClasses.Contact}}
+Diagramma delle classi per Low\+Level\+Classes.\+Contact\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_low_level_classes_1_1_contact}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_low_level_classes_1_1_contact_a60d007f4589b76f8c74ddaa33b6ffe28}{Contact}} ()
+\item 
+\mbox{\hyperlink{class_low_level_classes_1_1_contact_af1b36208a2ecf97e5b3a3ccb3d59323c}{Contact}} (String name, String surname, Array\+List$<$ String $>$ emails, Array\+List$<$ String $>$ numbers)
+\item 
+\Hypertarget{class_low_level_classes_1_1_contact_a3e5dcd9fe5fd69e653fa623956b255d1}\label{class_low_level_classes_1_1_contact_a3e5dcd9fe5fd69e653fa623956b255d1} 
+String {\bfseries get\+Name} ()
+\item 
+\Hypertarget{class_low_level_classes_1_1_contact_a618d7f19fa1bc417e3a623588506aa8d}\label{class_low_level_classes_1_1_contact_a618d7f19fa1bc417e3a623588506aa8d} 
+String {\bfseries get\+Surname} ()
+\item 
+\Hypertarget{class_low_level_classes_1_1_contact_a480adf695046297e80f5117fc11c1683}\label{class_low_level_classes_1_1_contact_a480adf695046297e80f5117fc11c1683} 
+Array\+List$<$ String $>$ {\bfseries get\+Emails} ()
+\item 
+\Hypertarget{class_low_level_classes_1_1_contact_a594dbb1f11bc9b56e31042d22aa3ec15}\label{class_low_level_classes_1_1_contact_a594dbb1f11bc9b56e31042d22aa3ec15} 
+Array\+List$<$ String $>$ {\bfseries get\+Numbers} ()
+\item 
+int \mbox{\hyperlink{class_low_level_classes_1_1_contact_a56697cbd4932e08f05e16a815820a3f5}{compare\+To}} (\mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} o)
+\item 
+String \mbox{\hyperlink{class_low_level_classes_1_1_contact_a709b8436355c844e42d1bc28d1f55f99}{to\+String}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+rappresenta un contatto con nome, cognome, email e numeri telefonici. 
+
+Viene utilizzata per gestire le informazioni base di un contatto e implementa\+: l\textquotesingle{}interfaccia {\ttfamily \doxylink{}{Comparable}} per poter essere ordinata in base a cognome e nome. l\textquotesingle{}interfaccia {\ttfamily \doxylink{}{Serializable}} per la corretta serializzazione attraverso {\ttfamily \doxylink{}{com.\+google.\+gson.\+Gson}} 
+
+\begin{DoxyAuthor}{Autore}
+Foschillo Gennaro 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentazione dei costruttori e dei distruttori}
+\Hypertarget{class_low_level_classes_1_1_contact_a60d007f4589b76f8c74ddaa33b6ffe28}\index{LowLevelClasses.Contact@{LowLevelClasses.Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!LowLevelClasses.Contact@{LowLevelClasses.Contact}}
+\doxysubsubsection{\texorpdfstring{Contact()}{Contact()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_a60d007f4589b76f8c74ddaa33b6ffe28} 
+Low\+Level\+Classes.\+Contact.\+Contact (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Il costruttore vuoto è utilizzato dalla libreria {\ttfamily \doxylink{}{com.\+google.\+gson.\+Gson}} per la serializzazione degli oggetti. \Hypertarget{class_low_level_classes_1_1_contact_af1b36208a2ecf97e5b3a3ccb3d59323c}\index{LowLevelClasses.Contact@{LowLevelClasses.Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!LowLevelClasses.Contact@{LowLevelClasses.Contact}}
+\doxysubsubsection{\texorpdfstring{Contact()}{Contact()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_af1b36208a2ecf97e5b3a3ccb3d59323c} 
+Low\+Level\+Classes.\+Contact.\+Contact (\begin{DoxyParamCaption}\item[{String}]{name}{, }\item[{String}]{surname}{, }\item[{Array\+List$<$ String $>$}]{emails}{, }\item[{Array\+List$<$ String $>$}]{numbers}{}\end{DoxyParamCaption})}
+
+Il costruttore con parametri permette di inizializzare i campi relativi ad un contatto. 
+\begin{DoxyParams}{Parametri}
+{\em name} & nome del contatto. \\
+\hline
+{\em surname} & cognome del contatto. \\
+\hline
+{\em emails} & Array\+List di String contenente le email del contatto. \\
+\hline
+{\em numbers} & Array\+List di String contenente i numeri del contatto. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{class_low_level_classes_1_1_contact_a56697cbd4932e08f05e16a815820a3f5}\index{LowLevelClasses.Contact@{LowLevelClasses.Contact}!compareTo@{compareTo}}
+\index{compareTo@{compareTo}!LowLevelClasses.Contact@{LowLevelClasses.Contact}}
+\doxysubsubsection{\texorpdfstring{compareTo()}{compareTo()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_a56697cbd4932e08f05e16a815820a3f5} 
+int Low\+Level\+Classes.\+Contact.\+compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}}}]{o}{}\end{DoxyParamCaption})}
+
+Confronta questo contatto con un altro contatto per determinare l\textquotesingle{}ordine alfabetico. 
+
+La logica di confronto è la seguente\+: 
+\begin{DoxyItemize}
+\item Se entrambi i cognomi sono non vuoti, vengono confrontati in ordine alfabetico. 
+\item Se i cognomi sono uguali, vengono confrontati i nomi. 
+\item Se uno dei campi (nome o cognome) è vuoto, il contatto con il campo non vuoto viene considerato "{}minore"{}. 
+\item Se il confronto tra cognomi e nomi non restituisce una differenza, i contatti sono considerati uguali. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parametri}
+{\em o} & L\textquotesingle{}altro contatto da confrontare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+Un valore negativo se questo contatto è "{}minore"{}, zero se sono uguali, o un valore positivo se questo contatto è "{}maggiore"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_low_level_classes_1_1_contact_a709b8436355c844e42d1bc28d1f55f99}\index{LowLevelClasses.Contact@{LowLevelClasses.Contact}!toString@{toString}}
+\index{toString@{toString}!LowLevelClasses.Contact@{LowLevelClasses.Contact}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_a709b8436355c844e42d1bc28d1f55f99} 
+String Low\+Level\+Classes.\+Contact.\+to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Override del metodo to\+String che restituisce una rappresentazione testuale del contatto. \begin{DoxyReturn}{Restituisce}
+una stringa con le informazioni del contatto. 
+\end{DoxyReturn}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/\+Low\+Level\+Classes/Contact.\+java\end{DoxyCompactItemize}

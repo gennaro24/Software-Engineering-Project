@@ -1,0 +1,85 @@
+\doxysection{Riferimenti per la classe Low\+Level\+Classes.\+Contact\+List}
+\hypertarget{class_low_level_classes_1_1_contact_list}{}\label{class_low_level_classes_1_1_contact_list}\index{LowLevelClasses.ContactList@{LowLevelClasses.ContactList}}
+Diagramma delle classi per Low\+Level\+Classes.\+Contact\+List\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_low_level_classes_1_1_contact_list}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_low_level_classes_1_1_contact_list_a6971fe34c2e824362b423a4c6c20fb76}{Contact\+List}} ()
+\item 
+\mbox{\hyperlink{class_low_level_classes_1_1_contact_list_af624ef6c09b2d184b0aadb117c30048e}{Contact\+List}} (Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$ ct)
+\item 
+\Hypertarget{class_low_level_classes_1_1_contact_list_a6d3e09ded2d63d3e8a8c25359a9edc27}\label{class_low_level_classes_1_1_contact_list_a6d3e09ded2d63d3e8a8c25359a9edc27} 
+Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$ {\bfseries get\+Contacts} ()
+\item 
+Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{class_low_level_classes_1_1_contact_list_aae6b56027e921b7591a977df33392038}{fix\+List}} (Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$ ct)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Astrazione di una lista di contatti. classe Wrapper di {\ttfamily \doxylink{class_low_level_classes_1_1_contact}{Contact}} 
+
+Questa classe gestisce un insieme di Contatti e fornisce metodi per filtrare e ordinare i contatti in base a determinati criteri. 
+
+\begin{DoxyAuthor}{Autore}
+Foschillo Gennaro 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentazione dei costruttori e dei distruttori}
+\Hypertarget{class_low_level_classes_1_1_contact_list_a6971fe34c2e824362b423a4c6c20fb76}\index{LowLevelClasses.ContactList@{LowLevelClasses.ContactList}!ContactList@{ContactList}}
+\index{ContactList@{ContactList}!LowLevelClasses.ContactList@{LowLevelClasses.ContactList}}
+\doxysubsubsection{\texorpdfstring{ContactList()}{ContactList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_list_a6971fe34c2e824362b423a4c6c20fb76} 
+Low\+Level\+Classes.\+Contact\+List.\+Contact\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Costruttore che inizializza l\textquotesingle{}attributo {\ttfamily \doxylink{a3ad0992dad8390dd060d893115fa61b5}{contacts}} \Hypertarget{class_low_level_classes_1_1_contact_list_af624ef6c09b2d184b0aadb117c30048e}\index{LowLevelClasses.ContactList@{LowLevelClasses.ContactList}!ContactList@{ContactList}}
+\index{ContactList@{ContactList}!LowLevelClasses.ContactList@{LowLevelClasses.ContactList}}
+\doxysubsubsection{\texorpdfstring{ContactList()}{ContactList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_list_af624ef6c09b2d184b0aadb117c30048e} 
+Low\+Level\+Classes.\+Contact\+List.\+Contact\+List (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$}]{ct}{}\end{DoxyParamCaption})}
+
+Costruttore che inizializza la lista con i contatti passati come parametro. 
+
+Viene invocato il metodo {\ttfamily \doxylink{}{fix\+List(\+Array\+List)}} per verificare e filtrare i contatti in base ai requisiti, dopodiché la lista viene ordinata in ordine naturale. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em ct} & La lista di contatti da validare e utilizzare per l\textquotesingle{}inizializzazione. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{class_low_level_classes_1_1_contact_list_aae6b56027e921b7591a977df33392038}\index{LowLevelClasses.ContactList@{LowLevelClasses.ContactList}!fixList@{fixList}}
+\index{fixList@{fixList}!LowLevelClasses.ContactList@{LowLevelClasses.ContactList}}
+\doxysubsubsection{\texorpdfstring{fixList()}{fixList()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_list_aae6b56027e921b7591a977df33392038} 
+Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$ Low\+Level\+Classes.\+Contact\+List.\+fix\+List (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$}]{ct}{}\end{DoxyParamCaption})}
+
+Verifica e corregge la lista di contatti passata come parametro. 
+
+Per ogni contatto viene effettuato il controllo\+: 
+\begin{DoxyItemize}
+\item Il nome e il cognome vengono validati tramite {\ttfamily \doxylink{class_low_level_classes_1_1_contact_checker_abdf6797a58f54e33677488c4e6038495}{Contact\+Checker\#check\+Name\+Surname(\+String, String)}}. Se il controllo fallisce, il contatto viene rimosso. 
+\item La validità degli indirizzi email viene controllata\+: se il numero di email è maggiore di 3 o almeno una email non rispetta il formato corretto (verificato tramite {\ttfamily \doxylink{class_low_level_classes_1_1_contact_checker_a59cd250d55ab1f39a3ebe392b32c6dc8}{Contact\+Checker\#is\+Valid\+Email(\+String)}}), il contatto viene rimosso. 
+\item Viene applicata una logica analoga per la lista dei numeri telefonici. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parametri}
+{\em ct} & La lista di contatti da verificare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+La lista di contatti validi. 
+\end{DoxyReturn}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/\+Low\+Level\+Classes/Contact\+List.\+java\end{DoxyCompactItemize}

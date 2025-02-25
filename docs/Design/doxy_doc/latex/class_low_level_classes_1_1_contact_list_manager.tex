@@ -1,0 +1,60 @@
+\doxysection{Riferimenti per la classe Low\+Level\+Classes.\+Contact\+List\+Manager}
+\hypertarget{class_low_level_classes_1_1_contact_list_manager}{}\label{class_low_level_classes_1_1_contact_list_manager}\index{LowLevelClasses.ContactListManager@{LowLevelClasses.ContactListManager}}
+\doxysubsubsection*{Membri pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{class_low_level_classes_1_1_contact_list_manager_abb4b3a116a7fcf6cf96139117b6ac490}{search\+Contact}} (Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$ contacts, String query)
+\item 
+static void \mbox{\hyperlink{class_low_level_classes_1_1_contact_list_manager_acf2545590945a54edc9a81052bef3c78}{update\+Contact}} (Observable\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$ contacts, \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} a, \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+fornisce metodi statici per la gestione e la manipolazione di liste di contatti. Include metodi per effettuare ricerche sui contatti e per aggiornare un contatto presente all\textquotesingle{}interno di una lista osservabile. 
+
+\begin{DoxyAuthor}{Autore}
+Foschillo 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{class_low_level_classes_1_1_contact_list_manager_abb4b3a116a7fcf6cf96139117b6ac490}\index{LowLevelClasses.ContactListManager@{LowLevelClasses.ContactListManager}!searchContact@{searchContact}}
+\index{searchContact@{searchContact}!LowLevelClasses.ContactListManager@{LowLevelClasses.ContactListManager}}
+\doxysubsubsection{\texorpdfstring{searchContact()}{searchContact()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_list_manager_abb4b3a116a7fcf6cf96139117b6ac490} 
+static Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$ Low\+Level\+Classes.\+Contact\+List\+Manager.\+search\+Contact (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$}]{contacts}{, }\item[{String}]{query}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Cerca contatti che contengono la query specificata nel nome o nel cognome. 
+
+Il metodo filtra la lista dei contatti confrontando (in modo case-\/insensitive) la concatenazione del nome e del cognome con la query fornita. La lista risultante viene poi ordinata in ordine naturale. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em contacts} & La lista di contatti in cui effettuare la ricerca. \\
+\hline
+{\em query} & La stringa (o sottostringa) da cercare. Se {\ttfamily null}, viene restituita la lista originale. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+Una lista di contatti che corrispondono alla query, ordinata alfabeticamente. 
+\end{DoxyReturn}
+\Hypertarget{class_low_level_classes_1_1_contact_list_manager_acf2545590945a54edc9a81052bef3c78}\index{LowLevelClasses.ContactListManager@{LowLevelClasses.ContactListManager}!updateContact@{updateContact}}
+\index{updateContact@{updateContact}!LowLevelClasses.ContactListManager@{LowLevelClasses.ContactListManager}}
+\doxysubsubsection{\texorpdfstring{updateContact()}{updateContact()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_list_manager_acf2545590945a54edc9a81052bef3c78} 
+static void Low\+Level\+Classes.\+Contact\+List\+Manager.\+update\+Contact (\begin{DoxyParamCaption}\item[{Observable\+List$<$ \mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}} $>$}]{contacts}{, }\item[{\mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}}}]{a}{, }\item[{\mbox{\hyperlink{class_low_level_classes_1_1_contact}{Contact}}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Aggiorna un contatto esistente in una lista osservabile. Se il contatto {\ttfamily a} è presente nella lista, viene sostituito dal nuovo contatto {\ttfamily b}. 
+\begin{DoxyParams}{Parametri}
+{\em contacts} & La lista osservabile dei contatti. \\
+\hline
+{\em a} & Il contatto da sostituire. \\
+\hline
+{\em b} & Il nuovo contatto da inserire al posto di {\ttfamily a}. \\
+\hline
+\end{DoxyParams}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/\+Low\+Level\+Classes/Contact\+List\+Manager.\+java\end{DoxyCompactItemize}

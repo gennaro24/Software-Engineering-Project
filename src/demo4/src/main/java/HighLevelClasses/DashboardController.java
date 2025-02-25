@@ -135,9 +135,9 @@ public class DashboardController implements Initializable {
             return row;
         });
     }
-    /***************************************************
-     * CARICAMENTO RISORSE ATTRAVERSO IL METODO loadFileFromResource()
-      ************************************************/
+    /**
+     * caricamento delle risorse attraverso il metodo loadFileFromResource
+     */
     private void loadResource(){
         FileManager fm = new FileManager();
         ContactList c = fm.loadFileFromResource();
@@ -154,16 +154,21 @@ public class DashboardController implements Initializable {
         fileChooser.setTitle("Seleziona il file dei contatti");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("File JSON (*.json)", "*.json"));
         File selectedFile = fileChooser.showOpenDialog(null);
-        if (selectedFile != null) {
-            FileManager fm = new FileManager();
-            ContactList c =  fm.loadFile(selectedFile.getAbsolutePath());
-            allContacts = FXCollections.observableArrayList(c.getContacts());
-            table.setItems(allContacts);
-            if (allContacts.isEmpty()) {
-                table.setPlaceholder(new Label("Nessun contatto presente."));
+        if (selectedFile != null ) {
+            if (selectedFile.getName().toLowerCase().endsWith(".json")) {
+                FileManager fm = new FileManager();
+                ContactList c =  fm.loadFile(selectedFile.getAbsolutePath());
+                allContacts = FXCollections.observableArrayList(c.getContacts());
+                table.setItems(allContacts);
+                if (allContacts.isEmpty()) {
+                    table.setPlaceholder(new Label("Nessun contatto presente."));
+                }
+                showAlert("Contatti caricati con successo da:\n" + selectedFile.getAbsolutePath(),
+                        Alert.AlertType.INFORMATION, "Caricamento");
+            }else{
+                showAlert("Errore durante il caricamento. Assicurarsi che il file caricato sia del formato adatto e riprovare.",
+                        Alert.AlertType.ERROR, "Errore");
             }
-            showAlert("Contatti caricati con successo da:\n" + selectedFile.getAbsolutePath(),
-                    Alert.AlertType.INFORMATION, "Caricamento");
         } else {
             showAlert("Nessun file selezionato.", Alert.AlertType.WARNING, "Caricamento");
         }
@@ -245,6 +250,8 @@ public class DashboardController implements Initializable {
         if (!query.isEmpty()) {
             ArrayList<Contact> filteredList = ContactListManager.searchContact(new ArrayList<>(allContacts), query);
             filteredContacts = FXCollections.observableArrayList(filteredList);
+            if (filteredList.isEmpty())
+                table.setPlaceholder(new Label("Nessun contatto corrispondente ai criteri di ricerca."));
             table.setItems(filteredContacts);
             resetSearchButton.setVisible(true);
         }
@@ -332,9 +339,9 @@ public class DashboardController implements Initializable {
         ContextDashboard.setVisible(false);
         ContextDashboard.setDisable(true);
     }
-    /***********************************************************************************************************
-      Pulizia dei campi della Dashboard di contesto per la modifica, visualizzazione e aggiunta di contatti.
-     ***********************************************************************************************************/
+    //***********************************************************************************************************
+    //Pulizia dei campi della Dashboard di contesto per la modifica, visualizzazione e aggiunta di contatti.
+     //***********************************************************************************************************
     private void clearContextDashboard(){
         name.clear();
         surname.clear();

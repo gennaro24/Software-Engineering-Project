@@ -1,0 +1,86 @@
+\doxysection{Riferimenti per la classe Low\+Level\+Classes.\+Contact\+Checker}
+\hypertarget{class_low_level_classes_1_1_contact_checker}{}\label{class_low_level_classes_1_1_contact_checker}\index{LowLevelClasses.ContactChecker@{LowLevelClasses.ContactChecker}}
+\doxysubsubsection*{Membri pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \mbox{\hyperlink{class_low_level_classes_1_1_contact_checker_a59cd250d55ab1f39a3ebe392b32c6dc8}{is\+Valid\+Email}} (String e)
+\item 
+static boolean \mbox{\hyperlink{class_low_level_classes_1_1_contact_checker_afdc5f825b5c8e28d99c33397de9304ac}{is\+Valid\+Number}} (String n)
+\item 
+static boolean \mbox{\hyperlink{class_low_level_classes_1_1_contact_checker_abdf6797a58f54e33677488c4e6038495}{check\+Name\+Surname}} (String name, String surname)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+fornisce i metodi utili per validare i campi relativi ad un oggetto {\ttfamily \doxylink{class_low_level_classes_1_1_contact}{Contact}} @\+Author Foschillo Gennaro 
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{class_low_level_classes_1_1_contact_checker_abdf6797a58f54e33677488c4e6038495}\index{LowLevelClasses.ContactChecker@{LowLevelClasses.ContactChecker}!checkNameSurname@{checkNameSurname}}
+\index{checkNameSurname@{checkNameSurname}!LowLevelClasses.ContactChecker@{LowLevelClasses.ContactChecker}}
+\doxysubsubsection{\texorpdfstring{checkNameSurname()}{checkNameSurname()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_checker_abdf6797a58f54e33677488c4e6038495} 
+static boolean Low\+Level\+Classes.\+Contact\+Checker.\+check\+Name\+Surname (\begin{DoxyParamCaption}\item[{String}]{name}{, }\item[{String}]{surname}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Il metodo controlla se le stringhe relative al nome e cognome {\ttfamily \doxylink{class_low_level_classes_1_1_contact}{Contact}} sono valide per l\textquotesingle{}inserimento nella {\ttfamily \doxylink{class_low_level_classes_1_1_contact_list}{Contact\+List}}. La logica di validazione è la seguente\+: 
+\begin{DoxyItemize}
+\item Deve essere presente almeno un campo tra nome e cognome 
+\item Se un campo contiene spazi , "{} o \textquotesingle{} viene considerato vuoto 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parametri}
+{\em name} & una String che rappresenta il nome. \\
+\hline
+{\em surname} & una String che rappresenta il cognome. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+un valore booleano che è true se le due stringhe sono vuote. 
+\end{DoxyReturn}
+\Hypertarget{class_low_level_classes_1_1_contact_checker_a59cd250d55ab1f39a3ebe392b32c6dc8}\index{LowLevelClasses.ContactChecker@{LowLevelClasses.ContactChecker}!isValidEmail@{isValidEmail}}
+\index{isValidEmail@{isValidEmail}!LowLevelClasses.ContactChecker@{LowLevelClasses.ContactChecker}}
+\doxysubsubsection{\texorpdfstring{isValidEmail()}{isValidEmail()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_checker_a59cd250d55ab1f39a3ebe392b32c6dc8} 
+static boolean Low\+Level\+Classes.\+Contact\+Checker.\+is\+Valid\+Email (\begin{DoxyParamCaption}\item[{String}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Il metodo controlla se una Stringa relativa alle email di un {\ttfamily \doxylink{class_low_level_classes_1_1_contact}{Contact}} è valida attraverso il matching di una regex. La logica di validazione è la seguente\+: 
+\begin{DoxyItemize}
+\item la prima parte della mail deve contenere almeno un carattere alfanumerico. sono consentiti i caratteri\+: (. \+\_\+) 
+\item Deve contenere una sola chiocciola tra le due parti della mail. 
+\item la seconda parte della mail deve essere composta da una parte di mail agent separata da . dalla parte del dominio 
+\item la parte di domino deve contenere almeno due caratteri. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parametri}
+{\em e} & una Stringa che rappresenta la mail da validare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+un valore booleano che è true se la mail è valida, false altrimenti. 
+\end{DoxyReturn}
+\Hypertarget{class_low_level_classes_1_1_contact_checker_afdc5f825b5c8e28d99c33397de9304ac}\index{LowLevelClasses.ContactChecker@{LowLevelClasses.ContactChecker}!isValidNumber@{isValidNumber}}
+\index{isValidNumber@{isValidNumber}!LowLevelClasses.ContactChecker@{LowLevelClasses.ContactChecker}}
+\doxysubsubsection{\texorpdfstring{isValidNumber()}{isValidNumber()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_contact_checker_afdc5f825b5c8e28d99c33397de9304ac} 
+static boolean Low\+Level\+Classes.\+Contact\+Checker.\+is\+Valid\+Number (\begin{DoxyParamCaption}\item[{String}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Il metodo controlla se una Stringa relativa ai numeri di un {\ttfamily \doxylink{class_low_level_classes_1_1_contact}{Contact}} è valida attraverso il matching di una regex. La logica di validazione è la seguente\+: 
+\begin{DoxyItemize}
+\item la stringa deve contenere solo numeri 
+\item deve avere una lunghezza compresa tra 3 e 15 caratteri. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parametri}
+{\em n} & una Stringa che rappresenta il numero da validare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+un valore booleano che è true se la mail è valida, false altrimenti. 
+\end{DoxyReturn}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/\+Low\+Level\+Classes/Contact\+Checker.\+java\end{DoxyCompactItemize}

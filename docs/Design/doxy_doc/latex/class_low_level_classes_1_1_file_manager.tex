@@ -1,0 +1,83 @@
+\doxysection{Riferimenti per la classe Low\+Level\+Classes.\+File\+Manager}
+\hypertarget{class_low_level_classes_1_1_file_manager}{}\label{class_low_level_classes_1_1_file_manager}\index{LowLevelClasses.FileManager@{LowLevelClasses.FileManager}}
+\doxysubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_low_level_classes_1_1_file_manager_a534e8acd10975ad46ef57c447957a25d}{File\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_low_level_classes_1_1_contact_list}{Contact\+List}} \mbox{\hyperlink{class_low_level_classes_1_1_file_manager_a4246dc86999f6ded660ed5cfc20e4137}{load\+File}} (String filepath)
+\item 
+\mbox{\hyperlink{class_low_level_classes_1_1_contact_list}{Contact\+List}} \mbox{\hyperlink{class_low_level_classes_1_1_file_manager_a819307a76f6f98ef6473fd3cbad2019d}{load\+File\+From\+Resource}} ()
+\item 
+void \mbox{\hyperlink{class_low_level_classes_1_1_file_manager_ae5fdb479b3e2eeabae33875451efa4e4}{save\+File}} (\mbox{\hyperlink{class_low_level_classes_1_1_contact_list}{Contact\+List}} contact\+List)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+gestisce il caricamento e il salvataggio di una lista di contatti in formato JSON. 
+
+Utilizza la libreria {\ttfamily \doxylink{}{com.\+google.\+gson.\+Gson}} per la serializzazione e la deserializzazione degli oggetti {\ttfamily \doxylink{class_low_level_classes_1_1_contact_list}{Contact\+List}}. 
+
+@\+Author Foschillo Gennaro 
+
+\doxysubsection{Documentazione dei costruttori e dei distruttori}
+\Hypertarget{class_low_level_classes_1_1_file_manager_a534e8acd10975ad46ef57c447957a25d}\index{LowLevelClasses.FileManager@{LowLevelClasses.FileManager}!FileManager@{FileManager}}
+\index{FileManager@{FileManager}!LowLevelClasses.FileManager@{LowLevelClasses.FileManager}}
+\doxysubsubsection{\texorpdfstring{FileManager()}{FileManager()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_file_manager_a534e8acd10975ad46ef57c447957a25d} 
+Low\+Level\+Classes.\+File\+Manager.\+File\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+costruttore vuoto per inizializzare l\textquotesingle{}attributo {\ttfamily \doxylink{ada35f97abaf4c2fcec342411bda9fbaf}{gson}} 
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{class_low_level_classes_1_1_file_manager_a4246dc86999f6ded660ed5cfc20e4137}\index{LowLevelClasses.FileManager@{LowLevelClasses.FileManager}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!LowLevelClasses.FileManager@{LowLevelClasses.FileManager}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_file_manager_a4246dc86999f6ded660ed5cfc20e4137} 
+\mbox{\hyperlink{class_low_level_classes_1_1_contact_list}{Contact\+List}} Low\+Level\+Classes.\+File\+Manager.\+load\+File (\begin{DoxyParamCaption}\item[{String}]{filepath}{}\end{DoxyParamCaption})}
+
+Carica il file JSON dal percorso specificato e restituisce una {\ttfamily \doxylink{class_low_level_classes_1_1_contact_list}{Contact\+List}}. 
+
+Se il file non esiste o è vuoto, viene restituita una lista vuota. Durante il caricamento, il contenuto del file viene letto, stampato a console e, successivamente, la lista viene salvata nuovamente per aggiornare eventuali modifiche. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em filepath} & Il percorso del file da caricare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+Una {\ttfamily \doxylink{class_low_level_classes_1_1_contact_list}{Contact\+List}} contenente i contatti caricati, oppure una lista vuota se il file non esiste o è vuoto. 
+\end{DoxyReturn}
+\Hypertarget{class_low_level_classes_1_1_file_manager_a819307a76f6f98ef6473fd3cbad2019d}\index{LowLevelClasses.FileManager@{LowLevelClasses.FileManager}!loadFileFromResource@{loadFileFromResource}}
+\index{loadFileFromResource@{loadFileFromResource}!LowLevelClasses.FileManager@{LowLevelClasses.FileManager}}
+\doxysubsubsection{\texorpdfstring{loadFileFromResource()}{loadFileFromResource()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_file_manager_a819307a76f6f98ef6473fd3cbad2019d} 
+\mbox{\hyperlink{class_low_level_classes_1_1_contact_list}{Contact\+List}} Low\+Level\+Classes.\+File\+Manager.\+load\+File\+From\+Resource (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Carica il file JSON presente tra le risorse del progetto e restituisce una {\ttfamily \doxylink{class_low_level_classes_1_1_contact_list}{Contact\+List}}. 
+
+Se il file {\ttfamily contact.\+json} non viene trovato tra le risorse, viene restituita una lista vuota. Se il file presenta contatti con campi non conformi ai requisiti, viene restituita una lista con i soli contatti validi. Dopo il caricamento, la lista viene salvata per aggiornare eventuali modifiche. 
+
+\begin{DoxyReturn}{Restituisce}
+Una {\ttfamily \doxylink{class_low_level_classes_1_1_contact_list}{Contact\+List}} contenente i contatti caricati, oppure una lista vuota in caso di errore. 
+\end{DoxyReturn}
+\Hypertarget{class_low_level_classes_1_1_file_manager_ae5fdb479b3e2eeabae33875451efa4e4}\index{LowLevelClasses.FileManager@{LowLevelClasses.FileManager}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!LowLevelClasses.FileManager@{LowLevelClasses.FileManager}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily \label{class_low_level_classes_1_1_file_manager_ae5fdb479b3e2eeabae33875451efa4e4} 
+void Low\+Level\+Classes.\+File\+Manager.\+save\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_low_level_classes_1_1_contact_list}{Contact\+List}}}]{contact\+List}{}\end{DoxyParamCaption})}
+
+Salva la {\ttfamily \doxylink{class_low_level_classes_1_1_contact_list}{Contact\+List}} in un file JSON. 
+
+Il file viene salvato nel percorso specificato dalla costante {\ttfamily FILE\+\_\+\+PATH}. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em contact\+List} & La lista di contatti da salvare. \\
+\hline
+\end{DoxyParams}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/\+Low\+Level\+Classes/File\+Manager.\+java\end{DoxyCompactItemize}

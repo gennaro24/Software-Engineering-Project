@@ -8,18 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c660e42-6086-424c-a0ea-1a63fbe113e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelClasses/ContactApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HighLevelClasses/ContactApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelClasses/ControllerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HighLevelClasses/ControllerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelClasses/ControllerService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelClasses/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HighLevelClasses/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelClasses/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelClasses/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactListManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelClasses/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelClasses/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/contact.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/contact.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images-styles/icons8-open-book.gif" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,11 +90,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fosch\Desktop\Software-Engineering-Project\src\demo4\src\test\java\LowLevelClasses\testFiles" />
       <recent name="C:\Users\fosch\Desktop\SequenceDiagrams" />
       <recent name="C:\Users\fosch\Desktop\Software-Engineering-Project\src\demo4\src\main\resources" />
       <recent name="C:\Users\fosch\Desktop\Software-Engineering-Project\src\demo4\src\main\java\HighLevelClasses" />
       <recent name="C:\Users\fosch\Desktop\Software-Engineering-Project\src\demo4\src\main\java\LowLevelClasses" />
-      <recent name="C:\Users\fosch\Desktop\Software-Engineering-Project\src\demo4\src\main\resources\images-styles" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -125,21 +117,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactListManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="LowLevelClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="LowLevelClasses" />
-      <option name="MAIN_CLASS_NAME" value="LowLevelClasses.ContactListManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ContactListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo4" />
       <extension name="coverage">
@@ -151,22 +128,6 @@
       <option name="PACKAGE_NAME" value="LowLevelClasses" />
       <option name="MAIN_CLASS_NAME" value="LowLevelClasses.ContactListTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactListTest.testFixListEmails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="LowLevelClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="LowLevelClasses" />
-      <option name="MAIN_CLASS_NAME" value="LowLevelClasses.ContactListTest" />
-      <option name="METHOD_NAME" value="testFixListEmails" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,13 +148,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileManagerTest.loadVoidFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LowLevelClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LowLevelClasses" />
+      <option name="MAIN_CLASS_NAME" value="LowLevelClasses.FileManagerTest" />
+      <option name="METHOD_NAME" value="loadVoidFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileManagerTest.saveVoidFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LowLevelClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LowLevelClasses" />
+      <option name="MAIN_CLASS_NAME" value="LowLevelClasses.FileManagerTest" />
+      <option name="METHOD_NAME" value="saveVoidFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HighLevelClasses.ContactApplication" />
+        <item itemvalue="JUnit.FileManagerTest.saveVoidFile" />
+        <item itemvalue="JUnit.FileManagerTest.loadVoidFile" />
         <item itemvalue="JUnit.ContactListTest" />
         <item itemvalue="JUnit.ContactListTest.testFixList_ManyNumbers" />
-        <item itemvalue="JUnit.ContactListTest.testFixListEmails" />
-        <item itemvalue="JUnit.ContactListManagerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +223,9 @@
       <workItem from="1740070062009" duration="9652000" />
       <workItem from="1740158815689" duration="36000" />
       <workItem from="1740159007302" duration="40511000" />
-      <workItem from="1740428721476" duration="3546000" />
+      <workItem from="1740428721476" duration="4152000" />
+      <workItem from="1740433980202" duration="7469000" />
+      <workItem from="1740496172536" duration="595000" />
     </task>
     <servers />
   </component>
