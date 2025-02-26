@@ -18,11 +18,11 @@ L'applicativo deve essere sviluppato in linguaggio **Java** e dotato di interfac
 
 - `/docs`               # Documentazione del progetto (Planning ,Requirements , Design)
 - `/docs/Planning`      # Pianificazione del progetto in aggiornamento continuo con task sempre più dettagliate.
-- `/docs/Requirements`  # Cartella contenente il documento dei requisiti, codice uml del diagramma dei casi d'uso e codice latex                            per la realizzazione del documento dei requisiti.
+- `/docs/Requirements`  # Cartella contenente il documento dei requisiti, codice uml del diagramma dei casi d'uso e codice latex per la realizzazione del documento dei requisiti.
 - `/docs/Design`        # Progettazione e diagrammi di progetto
-- `/resources`          # Eventuali file di immagini o dati 
-- `/src`                # Codice sorgente
-- `/tests`              # Contiene test per verificare il funzionamento dell'applicativo
+- `/src/demo4/src/main/resources`     # Eventuali file utility (.css , .fxml , .json) 
+- `/src/demo4/src/main/java`          # Codice sorgente
+- `/src/demo4/src/tests`              # Contiene test automatizzati delle classi LowLevel
 - `**2 branch**`:
   1. main: contiene il codice sviluppato e approvato
   2. dev: contiene il codice in sviluppo / non approvato
