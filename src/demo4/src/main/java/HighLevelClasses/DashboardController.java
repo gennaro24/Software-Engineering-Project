@@ -1,4 +1,5 @@
 package HighLevelClasses;
+import com.google.gson.stream.MalformedJsonException;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanBinding;
 import javafx.collections.FXCollections;
@@ -139,6 +140,7 @@ public class DashboardController implements Initializable {
      * caricamento delle risorse attraverso il metodo loadFileFromResource
      */
     private void loadResource(){
+
         FileManager fm = new FileManager();
         ContactList c = fm.loadFileFromResource();
         allContacts = FXCollections.observableArrayList(c.getContacts());
@@ -157,7 +159,7 @@ public class DashboardController implements Initializable {
         if (selectedFile != null ) {
             if (selectedFile.getName().toLowerCase().endsWith(".json")) {
                 FileManager fm = new FileManager();
-                ContactList c =  fm.loadFile(selectedFile.getAbsolutePath());
+                ContactList c = fm.loadFile(selectedFile.getAbsolutePath());
                 allContacts = FXCollections.observableArrayList(c.getContacts());
                 table.setItems(allContacts);
                 if (allContacts.isEmpty()) {

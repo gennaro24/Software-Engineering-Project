@@ -58,6 +58,7 @@ public class ContactList implements Serializable {
      */
     public ArrayList<Contact> fixList(ArrayList<Contact> ct){
         Iterator<Contact> it = ct.iterator();
+        int error = 0;
         while (it.hasNext()){
             Contact c = it.next();
             String name = c.getName();
@@ -71,17 +72,19 @@ public class ContactList implements Serializable {
             if (!(emails.size() > 3)){
                 for (String s : emails){
                     if (!ContactChecker.isValidEmail(s)){
-                        it.remove(); break;
+                        error++;
                     }
                 }
+                if (error > 0){it.remove(); continue;}
             }else {it.remove(); continue;}
 
             if (!(numbers.size() > 3)){
                 for (String s : numbers){
-                    if (!ContactChecker.isValidEmail(s)){
-                        it.remove(); break;
+                    if (!ContactChecker.isValidNumber(s)){
+                        error++;
                     }
                 }
+                if (error > 0){it.remove();}
             }else {it.remove();}
 
         }

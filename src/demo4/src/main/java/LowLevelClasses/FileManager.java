@@ -1,6 +1,9 @@
 package LowLevelClasses;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.stream.MalformedJsonException;
+
 import java.io.*;
 /**
  * gestisce il caricamento e il salvataggio di una lista di contatti
@@ -34,7 +37,7 @@ public FileManager(){
      * @return Una {@link ContactList} contenente i contatti caricati, oppure una lista vuota
      *         se il file non esiste o è vuoto.
      */
-    public ContactList loadFile(String filepath) {
+    public ContactList loadFile(String filepath){
         f = new File(filepath);
         if (!f.exists() || f.length() == 0) {
             return new ContactList();
@@ -48,9 +51,10 @@ public FileManager(){
             }
 
             return contacts;
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
+        } catch (JsonSyntaxException | MalformedJsonException e) {
+            System.out.println("file con formato json non valido");
+            return new ContactList();
+        }catch (IOException e){e.printStackTrace();}
         return new ContactList();
     }
     /**
@@ -63,7 +67,7 @@ public FileManager(){
      *
      * @return Una {@link ContactList} contenente i contatti caricati, oppure una lista vuota in caso di errore.
      */
-    public ContactList loadFileFromResource(){
+    public ContactList loadFileFromResource() {
         InputStream is = getClass().getResourceAsStream("/contact.json");
         if (is == null) {
             System.out.println("Il file contact.json non è stato trovato come risorsa.");
@@ -76,9 +80,9 @@ public FileManager(){
             }
 
             return contacts;
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
+        } catch (JsonSyntaxException | MalformedJsonException  e) {
+            return new ContactList();
+        }catch (IOException e ){e.printStackTrace();}
         return new ContactList();
     }
 

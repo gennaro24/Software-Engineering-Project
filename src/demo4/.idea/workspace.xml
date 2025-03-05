@@ -7,7 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c660e42-6086-424c-a0ea-1a63fbe113e2" name="Changes" comment="" />
+    <list default="true" id="2c660e42-6086-424c-a0ea-1a63fbe113e2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HighLevelClasses/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HighLevelClasses/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelClasses/ContactList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LowLevelClasses/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LowLevelClasses/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/contact.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/contact.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +64,7 @@
     &quot;Application.HighLevelClasses.ContactApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.test.executor&quot;: &quot;Run&quot;,
     &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Sequence&quot;,
+    &quot;JUnit.All in Contact List.executor&quot;: &quot;Run&quot;,
     &quot;Maven.demo4 [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.demo4 [compile].executor&quot;: &quot;Run&quot;,
     &quot;Maven.demo4 [validate].executor&quot;: &quot;Run&quot;,
@@ -101,7 +109,7 @@
   <component name="RunManager" selected="Application.HighLevelClasses.ContactApplication">
     <configuration name="HighLevelClasses.ContactApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HighLevelClasses.ContactApplication" />
-      <module name="demo4" />
+      <module name="Contact List" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="HighLevelClasses.*" />
@@ -112,17 +120,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo4" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="LowLevelClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="LowLevelClasses" />
-      <option name="MAIN_CLASS_NAME" value="LowLevelClasses.ContactListTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="All in Contact List" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Contact List" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,10 +178,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.HighLevelClasses.ContactApplication" />
+        <item itemvalue="JUnit.All in Contact List" />
         <item itemvalue="JUnit.FileManagerTest" />
         <item itemvalue="JUnit.FileManagerTest.saveVoidFile" />
         <item itemvalue="JUnit.FileManagerTest.loadVoidFile" />
-        <item itemvalue="JUnit.ContactListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -220,6 +221,8 @@
       <workItem from="1740428721476" duration="4152000" />
       <workItem from="1740433980202" duration="7469000" />
       <workItem from="1740496172536" duration="2825000" />
+      <workItem from="1741096224678" duration="2524000" />
+      <workItem from="1741170541663" duration="1264000" />
     </task>
     <servers />
   </component>
