@@ -58,8 +58,8 @@ public class ContactList implements Serializable {
      */
     public ArrayList<Contact> fixList(ArrayList<Contact> ct){
         Iterator<Contact> it = ct.iterator();
-        int error = 0;
         while (it.hasNext()){
+            int error = 0;
             Contact c = it.next();
             String name = c.getName();
             String surname = c.getSurname();
